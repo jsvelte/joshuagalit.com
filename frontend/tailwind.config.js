@@ -9,15 +9,17 @@ module.exports = {
   ],
   theme: {
     container: {
-      center: true,
-      padding: '2rem',
-      screens: {
-        '2xl': '1400px'
+      padding: {
+        DEFAULT: '1rem',
+        lg: '0'
       }
     },
     extend: {
       fontFamily: {
         sans: ['var(--font-sans)']
+      },
+      boxShadow: {
+        primary: '0px 18px 36px rgba(0, 0, 0, 0.05)'
       },
       colors: {
         border: 'hsl(var(--border))',
@@ -52,7 +54,9 @@ module.exports = {
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))'
-        }
+        },
+        section: '#F8F8F8',
+        'dark-section': '#0C1324'
       },
       borderRadius: {
         lg: 'var(--radius)',
