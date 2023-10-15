@@ -1,5 +1,5 @@
-import React, { FC } from 'react'
 import { cn } from '~/utils/cn'
+import React, { FC } from 'react'
 
 const SocialLinkSection: FC<Record<string, unknown>> = (props): JSX.Element => {
   const linkStyle = cn(

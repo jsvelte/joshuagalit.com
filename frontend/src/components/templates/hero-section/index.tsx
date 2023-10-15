@@ -19,7 +19,8 @@ const HeroSection: FC<Record<string, unknown>> = (): JSX.Element => {
     <section
       className={cn(
         'relative h-[550px] w-full bg-section dark:bg-dark-section sm:h-[780px]',
-        'px-2 py-6 text-slate-800 dark:text-white md:px-4'
+        'px-2 py-6 text-slate-800 dark:text-white md:px-4',
+        'transition-colors duration-1000'
       )}
     >
       <div className="mx-auto flex max-w-6xl place-content-center justify-center">
@@ -104,7 +105,8 @@ function TailwindIconComp(): JSX.Element {
     <div
       className={cn(
         'absolute bottom-[220px] right-[250px] z-10 rounded-full p-2.5',
-        'shadow-md dark:bg-slate-800 sm:bottom-[220px] sm:right-[450px]'
+        'shadow-md dark:bg-slate-800 sm:bottom-[220px] sm:right-[450px]',
+        'transition-colors duration-700'
       )}
     >
       <TailwindcssIcon className="h-12 w-12 text-[#38bdf8]" />
@@ -130,7 +132,8 @@ function FigmaIconComp(): JSX.Element {
     <div
       className={cn(
         'absolute bottom-[80px] right-[40px] z-10 rounded-full',
-        'bg-slate-200 p-2.5 shadow-md dark:bg-slate-800'
+        'bg-slate-200 p-2.5 shadow-md dark:bg-slate-800',
+        'transition-colors duration-700'
       )}
     >
       <FigmaIcon className="h-9 w-9 sm:h-12 sm:w-12" />
@@ -144,7 +147,8 @@ function StackOverflowCardComp(): JSX.Element {
       <Card
         className={cn(
           'relative w-full max-w-[240px] border border-slate-200 backdrop-blur-xl',
-          'bg-[#FDFDFD]/50 blur-none dark:border-slate-700 dark:bg-slate-900/50'
+          'bg-[#FDFDFD]/50 blur-none hover:bg-[#FDFDFD]/80 dark:border-slate-700',
+          'transition-colors duration-700 dark:bg-slate-900/50 hover:dark:bg-slate-900/80'
         )}
       >
         <div className="px-6 py-3">
@@ -164,7 +168,8 @@ function ProjectNumberCardComp(): JSX.Element {
       <Card
         className={cn(
           'relative w-full max-w-[240px] border border-slate-200 backdrop-blur-xl',
-          'bg-[#FDFDFD]/50 blur-none dark:border-slate-700 dark:bg-slate-900/50'
+          'bg-[#FDFDFD]/50 blur-none hover:bg-[#FDFDFD]/80 dark:border-slate-700',
+          'transition-colors duration-700 dark:bg-slate-900/50 hover:dark:bg-slate-900/80'
         )}
       >
         <div className="px-6 py-3">
