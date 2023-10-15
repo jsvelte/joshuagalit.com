@@ -1,19 +1,18 @@
 import React from 'react'
-import Head from 'next/head'
 import type { NextPage } from 'next'
 
-import { Button } from '~/components/ui/button'
+import Layout from '~/components/templates/layout'
+import HeroSection from '~/components/templates/hero-section'
+import SocialLinkSection from '~/components/templates/social-link-section'
 
-const Home: NextPage = (): JSX.Element => {
+const Index: NextPage = (): JSX.Element => {
   return (
-    <div>
-      <Head>
-        <title>Title</title>
-      </Head>
-      <p className="font-bold text-2xl"> Hello World</p>
-      <Button variant="destructive">Hello</Button>
-    </div>
+    <Layout>
+      <HeroSection />
+      <SocialLinkSection />
+      <div className="h-[2000px]"></div>
+    </Layout>
   )
 }
 
-export default Home
+export default Index

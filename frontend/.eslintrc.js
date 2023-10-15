@@ -15,7 +15,9 @@ module.exports = {
     'no-console': 'error',
     'eol-last': ['error', 'always'],
     'no-duplicate-imports': 'error',
-    '@typescript-eslint/consistent-type-imports': 'off'
+    '@typescript-eslint/consistent-type-imports': 'off',
+    '@typescript-eslint/consistent-type-definitions': 'off',
+    'react/prop-types': 'off'
   },
   settings: {
     react: {

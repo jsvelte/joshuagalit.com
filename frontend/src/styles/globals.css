@@ -1,1 +1,2 @@
-@import url('./tailwind.css');
+@import './tailwind.css';
+@import 'aos/dist/aos.css';
