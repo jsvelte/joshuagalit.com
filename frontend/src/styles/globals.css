@@ -1,2 +1,7 @@
+@import 'swiper/css';
 @import './tailwind.css';
 @import 'aos/dist/aos.css';
+@import 'swiper/css/pagination';
+@import 'swiper/css/effect-coverflow';
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';

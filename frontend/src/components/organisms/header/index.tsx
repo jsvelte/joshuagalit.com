@@ -1,16 +1,14 @@
 import { useTheme } from 'next-themes'
-import { Nunito } from 'next/font/google'
 import DarkModeToggle from 'react-dark-mode-toggle'
 import React, { FC, useEffect, useState } from 'react'
 
 import { cn } from '~/utils/cn'
+import { nunito } from '~/utils/font'
 import { Button } from '~/components/atoms/button'
 import useScreenCondition from '~/hooks/useScreenCondition'
 import NavPopover from '~/components/molecules/nav-popover/NavPopover'
 
 type Props = Record<string, unknown>
-
-const nunito = Nunito({ subsets: ['latin'] })
 
 export type TLink = {
   text: string
@@ -58,7 +56,7 @@ const Header: FC<Props> = (): JSX.Element => {
       className={cn(
         header ? 'top-4' : 'top-4 md:top-8',
         'fixed z-50 w-full max-w-xl px-4',
-        'md:max-w-3xl lg:max-w-6xl'
+        'transition-all duration-500 md:max-w-3xl lg:max-w-6xl'
       )}
     >
       <header
@@ -71,9 +69,9 @@ const Header: FC<Props> = (): JSX.Element => {
       >
         <div className="inline-flex items-center gap-x-12 pl-6">
           <a href="#" className="outline-indigo-500">
-            <h1 className={cn(nunito.className, 'text-xl font-extrabold md:text-2xl')}>
+            <span className={cn(nunito.className, 'text-xl font-extrabold md:text-2xl')}>
               JoshG<span className="text-indigo-500">.</span>
-            </h1>
+            </span>
           </a>
           {!isMediumScreen && (
             <nav>
