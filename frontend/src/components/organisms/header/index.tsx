@@ -57,7 +57,7 @@ const Header: FC<Props> = (): JSX.Element => {
     <div
       className={cn(
         header ? 'top-4' : 'top-4 md:top-8',
-        'fixed z-50 w-full max-w-xl px-4 transition-all duration-500',
+        'fixed z-50 w-full max-w-xl px-4',
         'md:max-w-3xl lg:max-w-6xl'
       )}
     >
@@ -65,7 +65,8 @@ const Header: FC<Props> = (): JSX.Element => {
         className={cn(
           'flex items-center justify-between rounded-full',
           'border border-slate-200 bg-white shadow-sm',
-          'dark:border-slate-800 dark:bg-slate-900'
+          'dark:border-slate-800 dark:bg-slate-900',
+          'transition-colors duration-1000'
         )}
       >
         <div className="inline-flex items-center gap-x-12 pl-6">
