@@ -1,15 +1,11 @@
 import Image from 'next/image'
 import React, { FC } from 'react'
-import { Nunito } from 'next/font/google'
 
-import { cn } from '~/utils/cn'
-import BubbleCircleIcon from '~/utils/icons/BubbleCircleIcon'
+import SectionTitle from '~/components/molecules/section-title'
 
-const nunito = Nunito({ subsets: ['latin'] })
-
-const AboutSection: FC<Record<string, unknown>> = (props): JSX.Element => {
+const AboutSection: FC<Record<string, unknown>> = (): JSX.Element => {
   return (
-    <div className="mx-auto w-full max-w-6xl px-4 py-32">
+    <div id="about" className="mx-auto w-full max-w-6xl px-4 py-32">
       <div className="grid grid-cols-1 gap-x-8 md:grid-cols-2">
         <div className="flex items-center justify-center" data-aos="fade-up">
           <Image
@@ -24,12 +20,7 @@ const AboutSection: FC<Record<string, unknown>> = (props): JSX.Element => {
         <div>
           <div data-aos="fade-down" data-aos-delay="500">
             <span className="font-bold text-sky-500">About</span>
-            <div className="relative">
-              <h1 className={cn('text-3xl font-extrabold md:text-5xl', nunito.className)}>
-                Who Am I
-              </h1>
-              <BubbleCircleIcon className="absolute -left-12 -top-5" />
-            </div>
+            <SectionTitle title="Who Am I" />
           </div>
           <div className="mt-4" data-aos="fade-down" data-aos-delay="700">
             <p className="text-slate-600 dark:text-slate-300 md:text-lg">
