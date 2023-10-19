@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
-import { Nunito } from 'next/font/google'
 import { ArrowUp, Plus } from 'lucide-react'
 
 import { cn } from '~/utils/cn'
+import { nunito } from '~/utils/font'
 import { Card } from '~/components/atoms/card'
 import TropyIcon from '~/utils/icons/TropyIcon'
 import FigmaIcon from '~/utils/icons/FigmaIcon'
@@ -11,8 +11,6 @@ import Header from '~/components/organisms/header'
 import { Button } from '~/components/atoms/button'
 import TailwindcssIcon from '~/utils/icons/TailwindcssIcon'
 import BubbleCircleIcon from '~/utils/icons/BubbleCircleIcon'
-
-const nunito = Nunito({ subsets: ['latin'] })
 
 const HeroSection: FC<Record<string, unknown>> = (): JSX.Element => {
   return (
