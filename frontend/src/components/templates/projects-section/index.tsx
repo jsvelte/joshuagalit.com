@@ -2,10 +2,10 @@ import React, { FC } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCoverflow, Pagination } from 'swiper/modules'
 
-import useScreenCondition from '~/hooks/useScreenCondition'
-import SectionTitle from '~/components/molecules/section-title'
-import ProjectCard from '~/components/molecules/project-card'
 import { myProjects } from '~/utils/constant/my-projects'
+import useScreenCondition from '~/hooks/useScreenCondition'
+import ProjectCard from '~/components/molecules/project-card'
+import SectionTitle from '~/components/molecules/section-title'
 
 const ProjectsSection: FC<Record<string, unknown>> = (): JSX.Element => {
   const isMediumScreen = useScreenCondition('(max-width: 768px)')
@@ -28,11 +28,7 @@ const ProjectsSection: FC<Record<string, unknown>> = (): JSX.Element => {
           They embody my expertise and passion developed over my career.
         </p>
       </div>
-      <div
-        className="mx-auto w-full max-w-6xl p-4 md:my-14"
-        data-aos="fade-up"
-        data-aos-delay={600}
-      >
+      <div className="mx-auto w-full max-w-6xl p-4" data-aos="fade-up" data-aos-delay={600}>
         <Swiper
           effect={'coverflow'}
           grabCursor={true}
