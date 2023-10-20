@@ -3,6 +3,7 @@ import type { NextPage } from 'next'
 
 import Layout from '~/components/templates/layout'
 import HeroSection from '~/components/templates/hero-section'
+import BlogSection from '~/components/templates/blog-section'
 import AboutSection from '~/components/templates/about-section'
 import ProjectsSection from '~/components/templates/projects-section'
 import MySkillsSection from '~/components/templates/my-skills-section'
@@ -18,6 +19,7 @@ const Index: NextPage = (): JSX.Element => {
       <MySkillsSection />
       <ProjectsSection />
       <ExperienceSection />
+      <BlogSection />
     </Layout>
   )
 }
