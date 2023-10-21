@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import React, { FC } from 'react'
 
+import { cn } from '~/utils/cn'
+import { oleoScript } from '~/utils/font'
 import { Card } from '~/components/atoms/card'
 import { Testimony } from '~/utils/constant/testimonials'
 
@@ -11,6 +13,14 @@ type Props = {
 const TestimonialCard: FC<Props> = ({ testimony }): JSX.Element => {
   return (
     <Card className="relative mx-auto flex w-full max-w-3xl flex-col items-center justify-center overflow-visible rounded-[40px] dark:bg-slate-900">
+      <p
+        className={cn(
+          oleoScript.className,
+          'absolute left-10 top-10 text-8xl font-extrabold text-slate-400'
+        )}
+      >
+        “
+      </p>
       <div className="absolute -top-16">
         <Image
           src={testimony.profileImageUrl}
@@ -24,7 +34,7 @@ const TestimonialCard: FC<Props> = ({ testimony }): JSX.Element => {
         />
       </div>
       <div className="mt-10 p-4 sm:p-6 md:p-8">
-        <div className="p-8 text-sm font-normal italic leading-loose text-slate-700 dark:text-slate-100 md:p-10 md:text-base">
+        <div className="px-14 py-8 text-sm font-normal italic leading-loose text-slate-700 dark:text-slate-100 md:p-10 md:text-base">
           <p dangerouslySetInnerHTML={{ __html: testimony.text }} />
         </div>
         <div className="flex flex-col items-center space-y-1">
