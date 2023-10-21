@@ -8,13 +8,14 @@ import { Button } from '~/components/atoms/button'
 import { IProject } from '~/utils/constant/my-projects'
 import useScreenCondition from '~/hooks/useScreenCondition'
 import { Card, CardContent, CardTitle } from '~/components/atoms/card'
+import { Badge } from '~/components/atoms/badge'
 
 type Props = {
   project: IProject
 }
 
 const ProjectCard: FC<Props> = ({ project }): JSX.Element => {
-  const { title, description, demoUrl, imageUrl, rating, sourceCodeUrl } = project
+  const { title, description, demoUrl, imageUrl, rating, sourceCodeUrl, tags } = project
 
   const isMediumScreen = useScreenCondition('(max-width: 768px)')
 
@@ -41,6 +42,13 @@ const ProjectCard: FC<Props> = ({ project }): JSX.Element => {
       <CardContent className="mt-4 text-slate-600 dark:text-slate-300">
         <div className="flex items-center gap-x-1">{renderRatings(rating)}</div>
         <CardTitle className={cn(nunito.className, 'mt-2')}>{title}</CardTitle>
+        <div className="mt-2 flex flex-wrap items-center gap-2">
+          {tags.map((tag, idx) => (
+            <Badge variant="secondary" key={idx}>
+              {tag}
+            </Badge>
+          ))}
+        </div>
         <p className={cn(openSans.className, 'mt-2 text-sm')}>{description}</p>
         <div className="mt-6 grid grid-cols-2 gap-x-4">
           <Button
