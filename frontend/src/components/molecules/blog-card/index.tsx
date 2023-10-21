@@ -21,7 +21,14 @@ const BlogCard: FC<Props> = ({ blog }): JSX.Element => {
       data-aos-delay={blog.delay}
     >
       <div className="relative rounded-2xl p-4 transition-shadow duration-200 hover:shadow-2xl">
-        <Image src={blog.image} width={800} height={500} priority alt="" />
+        <Image
+          src={blog.image}
+          width={800}
+          height={500}
+          priority
+          alt={blog.title}
+          onError={() => {}}
+        />
         <div className="flex flex-col space-y-3">
           <h1 className="mt-4 text-xl font-medium text-slate-800 dark:text-white md:text-2xl lg:text-3xl">
             {blog.title}
@@ -31,7 +38,7 @@ const BlogCard: FC<Props> = ({ blog }): JSX.Element => {
             dangerouslySetInnerHTML={{ __html: blog.description }}
           />
           <a
-            href="#"
+            href="#blog"
             className="mt-10 flex items-center space-x-2 text-base font-semibold text-sky-500 md:text-lg"
           >
             <span>Read More</span>
