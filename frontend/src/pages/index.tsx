@@ -9,6 +9,7 @@ import ProjectsSection from '~/components/templates/projects-section'
 import MySkillsSection from '~/components/templates/my-skills-section'
 import ExperienceSection from '~/components/templates/experience-section'
 import SocialLinkSection from '~/components/templates/social-link-section'
+import TestimonialSection from '~/components/templates/testimonial-section'
 
 const Index: NextPage = (): JSX.Element => {
   return (
@@ -20,6 +21,7 @@ const Index: NextPage = (): JSX.Element => {
       <ProjectsSection />
       <ExperienceSection />
       <BlogSection />
+      <TestimonialSection />
     </Layout>
   )
 }
