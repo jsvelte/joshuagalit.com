@@ -107,9 +107,11 @@ const Header: FC<Props> = (): JSX.Element => {
               }}
             />
           ) : (
-            <Button variant="primary" className="rounded-full px-8 outline-indigo-500">
-              Contact
-            </Button>
+            <a href="#contact">
+              <Button variant="primary" className="rounded-full px-8 outline-indigo-500">
+                Contact
+              </Button>
+            </a>
           )}
         </div>
       </header>
