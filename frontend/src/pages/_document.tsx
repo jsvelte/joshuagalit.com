@@ -8,7 +8,7 @@ const Document = (): JSX.Element => {
         <link rel="icon" href="/favicon.ico" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       </Head>
-      <body className="antialiased selection:bg-indigo-500 selection:text-white">
+      <body>
         <Main />
         <NextScript />
       </body>

@@ -71,6 +71,32 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply font-sans antialiased selection:bg-indigo-500 selection:text-white;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-slate-900 dark:text-white;
+  }
+  .h1 {
+    @apply text-5xl font-extrabold lg:text-6xl;
+  }
+  .h2 {
+    @apply text-3xl font-extrabold md:text-5xl;
+  }
+  .sub-title {
+    @apply font-bold text-sky-500;
+  }
+  .section-p {
+    @apply text-slate-600 dark:text-slate-300 md:text-lg;
+  }
+  .section {
+    @apply mx-auto w-full max-w-6xl px-4 py-32;
+  }
+  .section-block {
+    @apply bg-section dark:bg-dark-section;
   }
 }

@@ -7,7 +7,7 @@ const SocialLinkSection: FC<Record<string, unknown>> = (props): JSX.Element => {
   )
   return (
     <section
-      className="mx-auto mt-24 flex max-w-6xl items-center justify-between gap-x-4 px-4 py-4 sm:mt-8"
+      className="section mt-24 grid grid-cols-2 gap-4 px-4 py-4 sm:mt-8 sm:grid-cols-4"
       data-aos="fade-up"
       data-aos-delay="800"
       data-aos-duration="1500"

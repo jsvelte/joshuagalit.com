@@ -5,7 +5,7 @@ import SectionTitle from '~/components/molecules/section-title'
 
 const AboutSection: FC<Record<string, unknown>> = (): JSX.Element => {
   return (
-    <div id="about" className="mx-auto w-full max-w-6xl px-4 py-32">
+    <section id="about" className="section">
       <div className="grid grid-cols-1 gap-x-8 md:grid-cols-2">
         <div className="flex items-center justify-center" data-aos="fade-up">
           <Image
@@ -19,11 +19,11 @@ const AboutSection: FC<Record<string, unknown>> = (): JSX.Element => {
         </div>
         <div>
           <div data-aos="fade-down" data-aos-delay="500">
-            <span className="font-bold text-sky-500">About</span>
+            <span className="sub-title">About</span>
             <SectionTitle title="Who Am I" />
           </div>
           <div className="mt-4" data-aos="fade-down" data-aos-delay="700">
-            <p className="text-slate-600 dark:text-slate-300 md:text-lg">
+            <p className="section-p">
               I&apos;m Josh, residing in the province of Bato, Leyte. With 2 years of freelancing
               experience in video editing and 1.4 years of full-time work as a web developer at Sun
               Asterisk Philippines, I possess expertise in Fullstack application development, web
@@ -35,7 +35,7 @@ const AboutSection: FC<Record<string, unknown>> = (): JSX.Element => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
