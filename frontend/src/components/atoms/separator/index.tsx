@@ -16,7 +16,8 @@ const Separator = React.forwardRef<
       'shrink-0 bg-slate-200 dark:bg-slate-700',
       'transition-colors duration-1000',
       orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]',
-      className
+      className,
+      'mx-auto w-full max-w-2xl'
     )}
     {...props}
   />

@@ -11,7 +11,7 @@ type Props = {
 const SectionTitle: FC<Props> = ({ title }): JSX.Element => {
   return (
     <div className="relative">
-      <h1 className={cn('text-3xl font-extrabold md:text-5xl', nunito.className)}>{title}</h1>
+      <h2 className={cn('h2', nunito.className)}>{title}</h2>
       <BubbleCircleIcon className="absolute -left-12 -top-5 select-none" />
     </div>
   )

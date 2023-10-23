@@ -11,16 +11,13 @@ const ProjectsSection: FC<Record<string, unknown>> = (): JSX.Element => {
   const isMediumScreen = useScreenCondition('(max-width: 768px)')
 
   return (
-    <div
-      id="projects"
-      className="bg-section py-12 transition-colors duration-1000 dark:bg-dark-section"
-    >
-      <div className="mx-auto mt-14 max-w-6xl px-4 py-4">
+    <section id="projects" className="section-block transition-colors duration-1000">
+      <div className="mx-auto mt-14 max-w-6xl px-4 py-14">
         <div className="flex justify-center" data-aos="fade-down" data-aos-delay="200">
           <SectionTitle title="Projects" />
         </div>
         <p
-          className="mt-10 px-4 text-slate-600 dark:text-slate-300 sm:px-14 md:px-32 md:text-lg"
+          className="section-p mt-10 px-4 sm:px-14 md:px-32"
           data-aos="fade-down"
           data-aos-delay="300"
         >
@@ -47,7 +44,7 @@ const ProjectsSection: FC<Record<string, unknown>> = (): JSX.Element => {
           ))}
         </Swiper>
       </div>
-    </div>
+    </section>
   )
 }
 

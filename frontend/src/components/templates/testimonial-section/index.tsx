@@ -8,11 +8,8 @@ import TestimonialCard from '~/components/molecules/testimonial-card'
 
 const TestimonialSection: FC<Record<string, unknown>> = (): JSX.Element => {
   return (
-    <div
-      id="testimonial"
-      className="bg-section py-12 transition-colors duration-1000 dark:bg-dark-section"
-    >
-      <div className="mx-auto mt-14 max-w-6xl px-4 py-4">
+    <section id="testimonial" className="section-block transition-colors duration-1000">
+      <div className="section">
         <div className="flex justify-center" data-aos="fade-down" data-aos-delay="200">
           <SectionTitle title="What People Say" />
         </div>
@@ -23,7 +20,7 @@ const TestimonialSection: FC<Record<string, unknown>> = (): JSX.Element => {
           }}
           navigation={true}
           modules={[Pagination, Navigation]}
-          className="mt-8 px-8 py-28"
+          className="mt-32 overflow-visible px-8 py-8"
           data-aos="fade-up"
           data-aos-delay="700"
         >
@@ -38,7 +35,7 @@ const TestimonialSection: FC<Record<string, unknown>> = (): JSX.Element => {
           ))}
         </Swiper>
       </div>
-    </div>
+    </section>
   )
 }
 

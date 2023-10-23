@@ -16,9 +16,8 @@ const HeroSection: FC<Record<string, unknown>> = (): JSX.Element => {
   return (
     <section
       className={cn(
-        'relative h-[550px] w-full bg-section dark:bg-dark-section sm:h-[780px]',
-        'px-2 py-6 text-slate-800 dark:text-white md:px-4',
-        'transition-colors duration-1000'
+        'section-block relative h-[550px] w-full sm:h-[780px]',
+        'px-2 py-6 transition-colors duration-1000 md:px-4'
       )}
     >
       <div className="mx-auto flex max-w-6xl place-content-center justify-center">
@@ -31,9 +30,7 @@ const HeroSection: FC<Record<string, unknown>> = (): JSX.Element => {
             data-aos="fade-down"
             data-aos-delay="500"
           >
-            <h1 className={cn('text-5xl font-extrabold lg:text-6xl', nunito.className)}>
-              Hi, I Am Joshua Galit
-            </h1>
+            <h1 className={cn('h1', nunito.className)}>Hi, I Am Joshua Galit</h1>
             <BubbleCircleIcon className="absolute right-0 top-8 flex md:top-12" />
           </div>
           <div className="mt-8 w-full max-w-lg">
@@ -57,16 +54,18 @@ const HeroSection: FC<Record<string, unknown>> = (): JSX.Element => {
             >
               Hire Me
             </Button>
-            <Button
-              variant="ghost"
-              className={cn(
-                'inline-flex items-center space-x-3 px-6 py-6',
-                'text-base md:px-14 md:py-7 md:text-lg'
-              )}
-            >
-              <span className="font-semibold">Project</span>
-              <ArrowUp className="rotate-45" />
-            </Button>
+            <a href="#projects">
+              <Button
+                variant="ghost"
+                className={cn(
+                  'inline-flex items-center space-x-3 px-6 py-6',
+                  'text-base md:px-11 md:py-7 md:text-lg'
+                )}
+              >
+                <span className="font-semibold">Project</span>
+                <ArrowUp className="rotate-45" />
+              </Button>
+            </a>
           </div>
         </div>
         <div
