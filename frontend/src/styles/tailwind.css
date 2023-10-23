@@ -99,4 +99,7 @@
   .section-block {
     @apply bg-section dark:bg-dark-section;
   }
+  .form-control {
+    @apply h-[58px] rounded border border-slate-200 pl-6 text-slate-700 outline-none placeholder:text-slate-400 dark:border-slate-700 dark:bg-slate-800;
+  }
 }
