@@ -33,7 +33,7 @@ export const testimonials: Testimony[] = [
   },
   {
     profileImageUrl: '/images/testimonials/rogelio-john-oliverio.png',
-    name: 'John Paul Banera',
+    name: 'Rogelio John Oliverio',
     text: `
       Sir Joshua's development skills are truly exceptional, as he consistently delivers pixel-perfect designs and flawless user interfaces. After having the pleasure to work with him in the same company and in some projects, I can say that his proficiency in his current tech stack combination ensures that every project he undertakes is not only visually stunning but also highly functional and responsive.
       <br />
