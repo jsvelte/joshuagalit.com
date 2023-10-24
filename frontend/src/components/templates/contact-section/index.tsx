@@ -1,11 +1,12 @@
 import React, { FC } from 'react'
+
+import { cn } from '~/utils/cn'
 import { Button } from '~/components/atoms/button'
 import SectionTitle from '~/components/molecules/section-title'
-import { cn } from '~/utils/cn'
 
 const ContactSection: FC<Record<string, unknown>> = (): JSX.Element => {
   return (
-    <section id="contact" className="section">
+    <section id="contact" className="mx-auto w-full max-w-6xl px-4 py-16">
       <div
         className="flex min-h-[600px] flex-col bg-contact bg-cover bg-no-repeat py-24 dark:bg-none lg:flex-row lg:gap-x-[74px]"
         data-aos="zoom"

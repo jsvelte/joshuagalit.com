@@ -5,7 +5,7 @@ const Document = (): JSX.Element => {
   return (
     <Html className="scroll-smooth">
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       </Head>
       <body>
