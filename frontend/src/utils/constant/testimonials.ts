@@ -16,7 +16,7 @@ export const testimonials: Testimony[] = [
       <br />
       In summary, Joshua is a highly skilled and dedicated software developer with a wealth of experience in full stack development. His expertise in NextJS, Tailwindcss, Prisma, GraphQL and NestJS is invaluable to any project, and his professionalism and teamwork make him a true asset to any software development team. I feel fortunate to have had the opportunity to work alongside him, and I have no doubt that he will continue to excel in his career.
     `,
-    position: 'Fullstack Developer / Mobile Deveveloper',
+    position: 'Fullstack/Mobile Developer At Halcyon Agine Company',
     companyImageUrl: '/images/company/halcyon.png'
   },
   {
@@ -28,7 +28,19 @@ export const testimonials: Testimony[] = [
       <br />
       It has been a privilege collaborating with him, and I wholeheartedly recommend him for any project or role where excellence is required.
     `,
-    position: 'Fullstack Developer',
+    position: 'Fullstack Developer at Sun Asterisk Philippines',
+    companyImageUrl: '/images/company/sun-asterisk.png'
+  },
+  {
+    profileImageUrl: '/images/testimonials/rogelio-john-oliverio.png',
+    name: 'John Paul Banera',
+    text: `
+      Sir Joshua's development skills are truly exceptional, as he consistently delivers pixel-perfect designs and flawless user interfaces. After having the pleasure to work with him in the same company and in some projects, I can say that his proficiency in his current tech stack combination ensures that every project he undertakes is not only visually stunning but also highly functional and responsive.
+      <br />
+      <br />
+      I wholeheartedly recommend him for your web development and business digitalization needs.
+    `,
+    position: 'Fullstack Developer at Sun Asterisk Philippines',
     companyImageUrl: '/images/company/sun-asterisk.png'
   }
 ]

@@ -32,6 +32,10 @@ const Header: FC<Props> = (): JSX.Element => {
     {
       text: 'Blog',
       href: '#blog'
+    },
+    {
+      text: 'Testimonial',
+      href: '#testimonial'
     }
   ])
 
