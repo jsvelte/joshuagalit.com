@@ -2,6 +2,7 @@ import React from 'react'
 import type { NextPage } from 'next'
 
 import Layout from '~/components/templates/layout'
+import Footer from '~/components/organisms/footer'
 import { Separator } from '~/components/atoms/separator'
 import HeroSection from '~/components/templates/hero-section'
 import BlogSection from '~/components/templates/blog-section'
@@ -27,6 +28,7 @@ const Index: NextPage = (): JSX.Element => {
       <BlogSection />
       <TestimonialSection />
       <ContactSection />
+      <Footer />
     </Layout>
   )
 }
