@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React, { FC } from 'react'
 import { ArrowUp, Plus } from 'lucide-react'
 
@@ -74,13 +75,22 @@ const HeroSection: FC<Record<string, unknown>> = (): JSX.Element => {
           data-aos-delay="600"
         >
           {/* My Profile */}
-          <img
-            src="/images/user/joshuagalit-banner.png"
+          <div
             className={cn(
               'absolute -right-[80px] -top-[750px] z-10 rotate-[38deg]',
               'scale-75 sm:-right-[150px] sm:-top-[1000px] sm:scale-125'
             )}
-          />
+          >
+            <Image
+              src="/images/user/joshuagalit-banner.png"
+              quality={100}
+              width={400}
+              height={400}
+              priority
+              style={{ width: 'auto', height: 'auto' }}
+              alt="Profile"
+            />
+          </div>
           {/* Tailwindcss Icon */}
           <TailwindIconComp />
           {/* NextJS Icon */}

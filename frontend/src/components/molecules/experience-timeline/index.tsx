@@ -18,9 +18,9 @@ const ExperienceTimeLine: FC<Props> = ({ exp }): JSX.Element => {
     >
       <div className="flex items-start space-x-2 sm:space-x-6 md:space-x-8">
         <div className="relative hidden shrink-0 rounded bg-slate-100 shadow-md dark:bg-slate-800 md:block">
-          <h3 className="relative z-20 px-2 py-1.5 text-sm font-bold">
+          <span className="relative z-20 px-2 py-1.5 text-sm font-bold">
             {cn(exp.yearFrom + ' - ' + exp.yearTo)}
-          </h3>
+          </span>
           <span className="absolute -right-2 top-1.5 rotate-45 bg-slate-100 p-2.5 dark:bg-slate-800"></span>
         </div>
         <div className="flex flex-col items-center space-y-6">
@@ -40,9 +40,9 @@ const ExperienceTimeLine: FC<Props> = ({ exp }): JSX.Element => {
         <h1 className={cn(nunito.className, 'text-2xl font-bold md:text-3xl')}>{exp.jobTitle}</h1>
         <div className="flex flex-wrap items-start gap-x-4 sm:items-center">
           <img src={exp.company.image} className={cn(exp.id === 4 ? 'w-8' : 'w-14')} alt="" />
-          <h4 className="font-semibold text-slate-700 dark:text-slate-400 md:text-lg">
+          <p className="font-semibold text-slate-700 dark:text-slate-400 md:text-lg">
             {exp.company.name} • {exp.company.position}
-          </h4>
+          </p>
         </div>
         <p
           className="mt-4 text-sm text-slate-600 dark:text-slate-400 md:pr-24 md:text-base lg:pr-32"

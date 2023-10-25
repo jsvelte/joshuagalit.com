@@ -38,9 +38,9 @@ const TestimonialCard: FC<Props> = ({ testimony }): JSX.Element => {
           <p dangerouslySetInnerHTML={{ __html: testimony.text }} />
         </div>
         <div className="flex flex-col items-center space-y-1">
-          <h4 className="text-lg font-bold">{testimony.name}</h4>
+          <p className="text-lg font-bold">{testimony.name}</p>
           <span className="text-sm text-slate-500 dark:text-slate-400">{testimony.position}</span>
-          <img src={testimony.companyImageUrl} />
+          <img src={testimony.companyImageUrl} alt={testimony.name} />
         </div>
       </div>
     </Card>
