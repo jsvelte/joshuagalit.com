@@ -6,8 +6,8 @@ import { nunito } from '~/utils/font'
 
 const Footer: FC<Record<string, unknown>> = (): JSX.Element => {
   return (
-    <footer data-aos="fade-up" data-aos-offset="0">
-      <div className="mx-auto w-full max-w-6xl px-4 pb-10">
+    <footer data-aos="fade-up" data-aos-offset="0" className="mb-14">
+      <div className="mx-auto w-full max-w-6xl px-4">
         <div className="flex flex-col items-center justify-between gap-y-5 lg:flex-row">
           {/* logo */}
           <a href="#" className="outline-indigo-500">
@@ -18,13 +18,14 @@ const Footer: FC<Record<string, unknown>> = (): JSX.Element => {
           {/* copyright */}
           <p className="text-sm text-slate-500">&copy; 2023. All rights reserved.</p>
           {/* social icons */}
-          <div className="text-orange flex gap-x-4 text-lg">
+          <div className="flex gap-x-4 text-lg">
             <a
               href="https://www.facebook.com/acatzk"
               target="_blank"
               rel="noreferrer"
               className="rounded-full bg-white p-3 shadow-lg transition-colors duration-1000 hover:shadow-xl dark:bg-slate-800"
             >
+              <span className="sr-only">Visit my Facebook profile</span>
               <Facebook fill="#6366f1" strokeWidth={0} />
             </a>
             <a
@@ -33,6 +34,7 @@ const Footer: FC<Record<string, unknown>> = (): JSX.Element => {
               rel="noreferrer"
               className="rounded-full bg-white p-3 shadow-lg transition-colors duration-1000 hover:shadow-xl dark:bg-slate-800"
             >
+              <span className="sr-only">Visit my LinkedIn profile</span>
               <Linkedin fill="#6366f1" strokeWidth={0} />
             </a>
           </div>
