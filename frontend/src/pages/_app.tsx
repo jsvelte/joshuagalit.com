@@ -5,6 +5,7 @@ import React, { FC, useEffect } from 'react'
 import '~/styles/globals.css'
 import { cn } from '~/utils/cn'
 import { openSans } from '~/utils/font'
+import FacebbokMessenger from '~/lib/facebook-messenger'
 import { ThemeProvider } from '~/components/templates/theme-provider'
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }): JSX.Element => {
@@ -20,6 +21,7 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }): JSX.Element => {
       <div className={cn(openSans.className)}>
         <Component {...pageProps} />
       </div>
+      {process.env.NODE_ENV === 'production' && <FacebbokMessenger />}
     </ThemeProvider>
   )
 }
