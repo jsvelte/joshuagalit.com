@@ -1,7 +1,10 @@
+import fs from 'fs'
 import React from 'react'
+import matter from 'gray-matter'
 import dynamic from 'next/dynamic'
-import type { NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
 
+import { Blog } from '~/utils/types'
 import Layout from '~/components/templates/layout'
 import Footer from '~/components/organisms/footer'
 import { Separator } from '~/components/atoms/separator'
@@ -42,7 +45,11 @@ const ContactSection = dynamic(async () => await import('~/components/templates/
   ssr: false
 })
 
-const Index: NextPage = (): JSX.Element => {
+type Props = {
+  posts: Blog[]
+}
+
+const Index: NextPage<Props> = ({ posts }): JSX.Element => {
   return (
     <Layout>
       <HeroSection />
@@ -53,12 +60,37 @@ const Index: NextPage = (): JSX.Element => {
       <ProjectsSection />
       <ExperienceSection />
       <Separator />
-      <BlogSection />
+      <BlogSection
+        {...{
+          posts
+        }}
+      />
       <TestimonialSection />
       <ContactSection />
       <Footer />
     </Layout>
   )
+}
+
+export const getStaticProps: GetStaticProps = () => {
+  // Get all our blog posts
+  const files = fs.readdirSync('src/markdown')
+  const posts = files.map((fileName) => {
+    const slug = fileName.replace('.md', '')
+    const readFile = fs.readFileSync(`src/markdown/${fileName}`, 'utf-8')
+    const { data: frontMatter } = matter(readFile)
+
+    return {
+      slug,
+      frontMatter
+    }
+  })
+
+  return {
+    props: {
+      posts
+    }
+  }
 }
 
 export default Index

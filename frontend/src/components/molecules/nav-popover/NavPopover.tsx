@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import { Menu } from 'lucide-react'
 
+import { TLink } from '~/utils/types'
 import { Button } from '~/components/atoms/button'
-import { TLink } from '~/components/organisms/header'
 import { Popover, PopoverContent, PopoverTrigger } from '~/components/templates/popover'
 
 type Props = {

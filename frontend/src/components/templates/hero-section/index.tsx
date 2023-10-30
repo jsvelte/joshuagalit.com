@@ -1,28 +1,48 @@
 import Image from 'next/image'
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import { ArrowUp, Plus } from 'lucide-react'
 
 import { cn } from '~/utils/cn'
+import { TLink } from '~/utils/types'
 import { nunito } from '~/utils/font'
 import { Card } from '~/components/atoms/card'
 import TropyIcon from '~/utils/icons/TropyIcon'
 import FigmaIcon from '~/utils/icons/FigmaIcon'
 import NextJSIcon from '~/utils/icons/NextJSIcon'
-import Header from '~/components/organisms/header'
 import { Button } from '~/components/atoms/button'
+import Header from '~/components/organisms/header'
 import TailwindcssIcon from '~/utils/icons/TailwindcssIcon'
 import BubbleCircleIcon from '~/utils/icons/BubbleCircleIcon'
 
 const HeroSection: FC<Record<string, unknown>> = (): JSX.Element => {
+  const [links] = useState<TLink[]>([
+    {
+      text: 'Home',
+      href: '#'
+    },
+    {
+      text: 'Projects',
+      href: '#projects'
+    },
+    {
+      text: 'Blog',
+      href: '#blog'
+    },
+    {
+      text: 'Testimonial',
+      href: '#testimonial'
+    }
+  ])
+
   return (
     <section
       className={cn(
         'section-block relative h-[550px] w-full sm:h-[780px]',
-        'px-2 py-6 transition-colors duration-1000 md:px-4'
+        'px-2 py-6 transition-colors duration-700 md:px-4'
       )}
     >
       <div className="mx-auto flex max-w-6xl place-content-center justify-center">
-        <Header />
+        <Header {...{ links }} />
       </div>
       <div className="mx-auto max-w-6xl px-4 py-4">
         <div className="relative z-20 mt-36">
@@ -49,12 +69,14 @@ const HeroSection: FC<Record<string, unknown>> = (): JSX.Element => {
             data-aos="fade-down"
             data-aos-delay="700"
           >
-            <Button
-              variant="primary"
-              className="px-10 py-6 text-base font-semibold md:px-14 md:py-7 md:text-lg"
-            >
-              Hire Me
-            </Button>
+            <a href="/pdf/resume.pdf" target="_blank" className="outline-none">
+              <Button
+                variant="primary"
+                className="px-10 py-6 text-base font-semibold md:px-14 md:py-7 md:text-lg"
+              >
+                Hire Me
+              </Button>
+            </a>
             <a href="#projects">
               <Button
                 variant="ghost"
