@@ -4,11 +4,11 @@ import { Github, Link, Star } from 'lucide-react'
 
 import { cn } from '~/utils/cn'
 import { nunito, openSans } from '~/utils/font'
+import { Badge } from '~/components/atoms/badge'
 import { Button } from '~/components/atoms/button'
 import { IProject } from '~/utils/constant/my-projects'
 import useScreenCondition from '~/hooks/useScreenCondition'
 import { Card, CardContent, CardTitle } from '~/components/atoms/card'
-import { Badge } from '~/components/atoms/badge'
 
 type Props = {
   project: IProject

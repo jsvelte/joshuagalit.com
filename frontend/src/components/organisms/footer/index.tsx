@@ -23,7 +23,7 @@ const Footer: FC<Record<string, unknown>> = (): JSX.Element => {
               href="https://www.facebook.com/acatzk"
               target="_blank"
               rel="noreferrer"
-              className="rounded-full bg-white p-3 shadow-lg transition-colors duration-1000 hover:shadow-xl dark:bg-slate-800"
+              className="rounded-full bg-white p-3 shadow-lg transition-colors duration-700 hover:shadow-xl dark:bg-slate-800"
             >
               <span className="sr-only">Visit my Facebook profile</span>
               <Facebook fill="#6366f1" strokeWidth={0} />
@@ -32,7 +32,7 @@ const Footer: FC<Record<string, unknown>> = (): JSX.Element => {
               href="https://www.linkedin.com/in/joshua-galit-7b6b84200/"
               target="_blank"
               rel="noreferrer"
-              className="rounded-full bg-white p-3 shadow-lg transition-colors duration-1000 hover:shadow-xl dark:bg-slate-800"
+              className="rounded-full bg-white p-3 shadow-lg transition-colors duration-700 hover:shadow-xl dark:bg-slate-800"
             >
               <span className="sr-only">Visit my LinkedIn profile</span>
               <Linkedin fill="#6366f1" strokeWidth={0} />

@@ -8,7 +8,7 @@ import TestimonialCard from '~/components/molecules/testimonial-card'
 
 const TestimonialSection: FC<Record<string, unknown>> = (): JSX.Element => {
   return (
-    <section id="testimonial" className="section-block transition-colors duration-1000">
+    <section id="testimonial" className="section-block transition-colors duration-700">
       <div className="section">
         <div className="flex justify-center" data-aos="fade-down" data-aos-delay="200">
           <SectionTitle title="What People Say" />

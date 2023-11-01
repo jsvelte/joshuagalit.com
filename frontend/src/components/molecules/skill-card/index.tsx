@@ -9,7 +9,7 @@ const SkillCard: FC<Skill> = ({ title, image }): JSX.Element => {
     <div
       className={cn(
         'rounded-xl border border-transparent bg-slate-50 ',
-        'transition-colors duration-1000 hover:shadow-lg dark:border-slate-700',
+        'transition-colors duration-700 hover:shadow-lg dark:border-slate-700',
         'h-44 flex-1 dark:bg-slate-800 hover:dark:border-slate-400'
       )}
     >

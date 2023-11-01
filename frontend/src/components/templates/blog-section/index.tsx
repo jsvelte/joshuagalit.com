@@ -1,12 +1,16 @@
 import React, { FC } from 'react'
 
-import { blogs } from '~/utils/constant/blog'
+import { Blog } from '~/utils/types'
 import { Button } from '~/components/atoms/button'
 import BlogCard from '~/components/molecules/blog-card'
 import useScreenCondition from '~/hooks/useScreenCondition'
 import SectionTitle from '~/components/molecules/section-title'
 
-const BlogSection: FC<Record<string, unknown>> = (): JSX.Element => {
+type Props = {
+  posts: Blog[]
+}
+
+const BlogSection: FC<Props> = ({ posts }): JSX.Element => {
   const isMediumScreen = useScreenCondition('(max-width: 768px)')
 
   return (
@@ -27,11 +31,12 @@ const BlogSection: FC<Record<string, unknown>> = (): JSX.Element => {
           </Button>
         </div>
         {/* Content */}
-        {blogs.map((blog, idx) => (
+        {posts?.map((blog, idx) => (
           <BlogCard
             key={idx}
             {...{
-              blog
+              blog,
+              idx
             }}
           />
         ))}

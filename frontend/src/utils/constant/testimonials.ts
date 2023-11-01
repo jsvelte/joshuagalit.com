@@ -54,5 +54,14 @@ export const testimonials: Testimony[] = [
     `,
     position: 'Web Developer at Sun Asterisk Philippines',
     companyImageUrl: '/images/company/sun-asterisk.png'
+  },
+  {
+    profileImageUrl: '/images/testimonials/abdul-jalil-palala.png',
+    name: 'Abdul Jalil Palala',
+    text: `
+      I recommend Joshua Galit because he wants to achieve 6k digits HAHAHAHA
+    `,
+    position: 'Fullstack Web Developer at Sun Asterisk Philippines',
+    companyImageUrl: '/images/company/sun-asterisk.png'
   }
 ]

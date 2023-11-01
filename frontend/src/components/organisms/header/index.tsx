@@ -1,43 +1,24 @@
+import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import DarkModeToggle from 'react-dark-mode-toggle'
 import React, { FC, useEffect, useState } from 'react'
 
 import { cn } from '~/utils/cn'
+import { TLink } from '~/utils/types'
 import { nunito } from '~/utils/font'
 import { Button } from '~/components/atoms/button'
 import useScreenCondition from '~/hooks/useScreenCondition'
 import NavPopover from '~/components/molecules/nav-popover/NavPopover'
 
-type Props = Record<string, unknown>
-
-export type TLink = {
-  text: string
-  href: string
+type Props = {
+  links: TLink[]
 }
 
-const Header: FC<Props> = (): JSX.Element => {
+const Header: FC<Props> = ({ links }): JSX.Element => {
   const { theme, setTheme } = useTheme()
   const isMediumScreen = useScreenCondition('(max-width: 768px)')
 
   const [header, setHeader] = useState<boolean>(false)
-  const [links] = useState<TLink[]>([
-    {
-      text: 'Home',
-      href: '#'
-    },
-    {
-      text: 'Projects',
-      href: '#projects'
-    },
-    {
-      text: 'Blog',
-      href: '#blog'
-    },
-    {
-      text: 'Testimonial',
-      href: '#testimonial'
-    }
-  ])
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -68,19 +49,19 @@ const Header: FC<Props> = (): JSX.Element => {
           'flex items-center justify-between rounded-full',
           'border border-slate-200 bg-white shadow-sm',
           'dark:border-slate-800 dark:bg-slate-900',
-          'transition-colors duration-1000'
+          'transition-colors duration-700'
         )}
       >
         <div className="inline-flex items-center gap-x-12 pl-6">
-          <a href="#" className="outline-indigo-500">
+          <Link href="/" className="outline-indigo-500">
             <span className={cn(nunito.className, 'text-xl font-extrabold md:text-2xl')}>
               JoshG<span className="text-indigo-500">.</span>
             </span>
-          </a>
+          </Link>
           {!isMediumScreen && (
             <nav>
               <ul className="flex items-center gap-x-10 font-semibold text-slate-700 dark:text-slate-300">
-                {links.map((link, index) => (
+                {links?.map((link, index) => (
                   <li key={index} className="relative flex flex-col items-center">
                     <a href={link.href} className="outline-indigo-500">
                       {link.text}
