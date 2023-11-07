@@ -79,8 +79,19 @@ module.exports = {
       },
       backgroundImage: {
         contact: "url('/images/contact/bg.png')"
-      }
+      },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            pre: false
+          }
+        }
+      })
     }
   },
-  plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')]
+  plugins: [
+    require('tailwindcss-animate'),
+    require('@tailwindcss/typography'),
+    require('tailwind-scrollbar')({ nocompatible: true })
+  ]
 }
