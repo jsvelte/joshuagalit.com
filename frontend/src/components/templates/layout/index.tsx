@@ -15,6 +15,7 @@ const Layout: FC<Props> = ({ metaTitle, children }): JSX.Element => {
     >
       <Head>
         <title>{(metaTitle as string) ?? 'Joshua Galit'}</title>
+        <link rel="icon" href="/logo.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"

@@ -1,5 +1,6 @@
 import Aos from 'aos'
 import type { AppProps } from 'next/app'
+import { Toaster } from 'react-hot-toast'
 import React, { FC, useEffect } from 'react'
 
 import '~/styles/globals.css'
@@ -18,6 +19,10 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }): JSX.Element => {
 
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <Toaster
+        position="bottom-center"
+        containerClassName={cn('font-medium text-sm', openSans.className)}
+      />
       <div className={cn(openSans.className)}>
         <Component {...pageProps} />
       </div>

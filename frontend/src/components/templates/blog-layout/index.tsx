@@ -56,11 +56,11 @@ const BlogLayout: FC<Props> = ({ title, publishedAt, readTime, children }): JSX.
   return (
     <Layout metaTitle={`Blog - ${title}`}>
       <ScrollProgress />
-      <div className="fixed top-0 w-full flex-1">
+      <div className="fixed top-0 z-50 w-full flex-1">
         <header
           className={cn(
-            header ? 'py-2' : 'px-4 py-4 md:py-6',
-            'bg-section transition-all duration-700 dark:bg-dark-section'
+            header ? 'py-2' : 'py-4 md:py-6',
+            'bg-section px-4 transition-all duration-700 dark:bg-dark-section'
           )}
         >
           <div className="mx-auto flex w-full max-w-2xl flex-wrap items-center justify-between">

@@ -1,5 +1,4 @@
 import fs from 'fs'
-import md from 'markdown-it'
 import matter from 'gray-matter'
 import { ParsedUrlQuery } from 'querystring'
 import React, { useEffect, useState } from 'react'
@@ -8,6 +7,7 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { FrontMatter } from '~/utils/types'
 import calculateReadTime from '~/utils/readTimeDuration'
 import BlogLayout from '~/components/templates/blog-layout'
+import MarkdownRender from '~/lib/markdown-render'
 
 type Props = {
   frontMatter: FrontMatter
@@ -19,7 +19,7 @@ const Blog: NextPage<Props> = ({ frontMatter, content, readTime }): JSX.Element 
   const [renderedContent, setRenderedContent] = useState<string>('')
 
   useEffect(() => {
-    setRenderedContent(md().render(content))
+    setRenderedContent(content)
   }, [content])
 
   return (
@@ -31,7 +31,7 @@ const Blog: NextPage<Props> = ({ frontMatter, content, readTime }): JSX.Element 
       }}
     >
       <section className="prose prose-indigo mx-auto dark:prose-invert md:prose-lg">
-        <p dangerouslySetInnerHTML={{ __html: renderedContent }} />
+        <MarkdownRender mdString={renderedContent} />
       </section>
     </BlogLayout>
   )
