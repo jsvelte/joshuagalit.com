@@ -75,16 +75,18 @@ const Index: NextPage<Props> = ({ posts }): JSX.Element => {
 export const getStaticProps: GetStaticProps = () => {
   // Get all our blog posts
   const files = fs.readdirSync('src/markdown')
-  const posts = files.map((fileName) => {
-    const slug = fileName.replace('.md', '')
-    const readFile = fs.readFileSync(`src/markdown/${fileName}`, 'utf-8')
-    const { data: frontMatter } = matter(readFile)
+  const posts = files
+    .map((fileName) => {
+      const slug = fileName.replace('.md', '')
+      const readFile = fs.readFileSync(`src/markdown/${fileName}`, 'utf-8')
+      const { data: frontMatter } = matter(readFile)
 
-    return {
-      slug,
-      frontMatter
-    }
-  })
+      return {
+        slug,
+        frontMatter
+      }
+    })
+    .slice(0, 4)
 
   return {
     props: {
