@@ -19,6 +19,7 @@ const Header: FC<Props> = ({ links }): JSX.Element => {
   const isMediumScreen = useScreenCondition('(max-width: 768px)')
 
   const [header, setHeader] = useState<boolean>(false)
+  const [activeSection, setActiveSection] = useState<string>('Home')
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -35,6 +36,34 @@ const Header: FC<Props> = ({ links }): JSX.Element => {
         setTheme('light')
     }
   }
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop
+
+    // Determine the active section based on scroll position
+    for (const link of links) {
+      const targetElement = document.getElementById(link.href.substring(1))
+      if (targetElement) {
+        const offsetTop = targetElement.getBoundingClientRect().top - 50 // Adjust this offset as needed
+        const offsetBottom = offsetTop + targetElement.clientHeight
+
+        if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+          setActiveSection(link.href)
+          break
+        }
+      }
+    }
+  }
+
+  useEffect(() => {
+    // Attach the scroll event listener when the component mounts
+    window.addEventListener('scroll', handleScroll)
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, []) // Empty dependency array ensures the effect runs only once on mount
 
   return (
     <div
@@ -61,16 +90,17 @@ const Header: FC<Props> = ({ links }): JSX.Element => {
           {!isMediumScreen && (
             <nav>
               <ul className="flex items-center gap-x-10 font-semibold text-slate-700 dark:text-slate-300">
-                {links?.map((link, index) => (
+                {links.map((link, index) => (
                   <li key={index} className="relative flex flex-col items-center">
                     <a href={link.href} className="outline-indigo-500">
                       {link.text}
                     </a>
                     <span
-                      className={cn(
-                        'absolute -bottom-3 h-[5px] w-10 rounded-t-md',
-                        link.text === 'Home' ? ' bg-indigo-500' : 'bg-transparent'
-                      )}
+                      className={`absolute -bottom-3 h-[5px] w-10 rounded-t-md transition-transform duration-300 ease-in-out ${
+                        activeSection === link.href
+                          ? 'translate-x-0 transform bg-indigo-500'
+                          : 'translate-x-full transform bg-transparent'
+                      }`}
                     ></span>
                   </li>
                 ))}
