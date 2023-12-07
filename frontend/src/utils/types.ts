@@ -15,4 +15,5 @@ export type FrontMatter = {
 export type TLink = {
   text: string
   href: string
+  offset: number
 }

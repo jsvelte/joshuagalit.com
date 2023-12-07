@@ -1,12 +1,12 @@
-import Link from 'next/link'
 import { useTheme } from 'next-themes'
+import { Link as ScrollLink } from 'react-scroll'
 import DarkModeToggle from 'react-dark-mode-toggle'
 import React, { FC, useEffect, useState } from 'react'
 
 import { cn } from '~/utils/cn'
 import { TLink } from '~/utils/types'
-import { nunito } from '~/utils/font'
 import { Button } from '~/components/atoms/button'
+import { LogoTitle } from '~/components/atoms/logo-title'
 import useScreenCondition from '~/hooks/useScreenCondition'
 import NavPopover from '~/components/molecules/nav-popover/NavPopover'
 
@@ -19,6 +19,7 @@ const Header: FC<Props> = ({ links }): JSX.Element => {
   const isMediumScreen = useScreenCondition('(max-width: 768px)')
 
   const [header, setHeader] = useState<boolean>(false)
+  const [activeNav, setActiveNav] = useState<number | null>(null)
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -34,6 +35,11 @@ const Header: FC<Props> = ({ links }): JSX.Element => {
       default:
         setTheme('light')
     }
+  }
+
+  const handleOnSetActive = (link: TLink): void => {
+    const index = links.findIndex((l) => l.href === link.href)
+    setActiveNav(index)
   }
 
   return (
@@ -53,23 +59,29 @@ const Header: FC<Props> = ({ links }): JSX.Element => {
         )}
       >
         <div className="inline-flex items-center gap-x-12 pl-6">
-          <Link href="/" className="outline-indigo-500">
-            <span className={cn(nunito.className, 'text-xl font-extrabold md:text-2xl')}>
-              JoshG<span className="text-indigo-500">.</span>
-            </span>
-          </Link>
+          <LogoTitle />
           {!isMediumScreen && (
             <nav>
               <ul className="flex items-center gap-x-10 font-semibold text-slate-700 dark:text-slate-300">
                 {links?.map((link, index) => (
                   <li key={index} className="relative flex flex-col items-center">
-                    <a href={link.href} className="outline-indigo-500">
+                    <ScrollLink
+                      to={link.href}
+                      spy={true}
+                      smooth={true}
+                      offset={link.offset}
+                      duration={200}
+                      onSetActive={() => {
+                        handleOnSetActive(link)
+                      }}
+                      className="cursor-pointer select-none"
+                    >
                       {link.text}
-                    </a>
+                    </ScrollLink>
                     <span
                       className={cn(
-                        'absolute -bottom-3 h-[5px] w-10 rounded-t-md',
-                        link.text === 'Home' ? ' bg-indigo-500' : 'bg-transparent'
+                        'absolute -bottom-3 h-[5px] w-10 rounded-t-md transition duration-300',
+                        Number(activeNav) === index ? ' w-full bg-indigo-500' : 'bg-transparent'
                       )}
                     ></span>
                   </li>
@@ -88,15 +100,17 @@ const Header: FC<Props> = ({ links }): JSX.Element => {
           {isMediumScreen ? (
             <NavPopover
               {...{
-                links
+                links,
+                activeNav,
+                handleOnSetActive
               }}
             />
           ) : (
-            <a href="#contact">
+            <ScrollLink to="contact">
               <Button variant="primary" className="rounded-full px-8 outline-indigo-500">
                 Contact
               </Button>
-            </a>
+            </ScrollLink>
           )}
         </div>
       </header>
