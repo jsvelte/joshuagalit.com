@@ -18,24 +18,29 @@ const HeroSection: FC<Record<string, unknown>> = (): JSX.Element => {
   const [links] = useState<TLink[]>([
     {
       text: 'Home',
-      href: '#'
+      href: 'home',
+      offset: -50
     },
     {
       text: 'Projects',
-      href: '#projects'
+      href: 'projects',
+      offset: -50
     },
     {
       text: 'Blog',
-      href: '#blog'
+      href: 'blog',
+      offset: 0
     },
     {
       text: 'Testimonial',
-      href: '#testimonial'
+      href: 'testimonial',
+      offset: 0
     }
   ])
 
   return (
     <section
+      id="home"
       className={cn(
         'section-block relative h-[550px] w-full sm:h-[780px]',
         'px-2 py-6 transition-colors duration-700 md:px-4'

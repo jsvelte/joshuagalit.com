@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import { Menu } from 'lucide-react'
+import { Link as ScrollLink } from 'react-scroll'
 
 import { TLink } from '~/utils/types'
 import { Button } from '~/components/atoms/button'
@@ -7,9 +8,11 @@ import { Popover, PopoverContent, PopoverTrigger } from '~/components/templates/
 
 type Props = {
   links: TLink[]
+  activeNav: number | null
+  handleOnSetActive: (link: TLink) => void
 }
 
-const NavPopover: FC<Props> = ({ links }): JSX.Element => {
+const NavPopover: FC<Props> = ({ links, activeNav, handleOnSetActive }): JSX.Element => {
   return (
     <Popover>
       <PopoverTrigger asChild>
@@ -23,20 +26,33 @@ const NavPopover: FC<Props> = ({ links }): JSX.Element => {
       <PopoverContent className="mt-2 w-full overflow-hidden rounded-xl p-0 dark:bg-slate-800">
         <div className="px-4 py-3">
           {links.map((link, index) => (
-            <a key={index} href={link.href}>
+            <ScrollLink
+              key={index}
+              to={link.href}
+              spy={true}
+              smooth={true}
+              offset={link.offset}
+              duration={200}
+              onSetActive={() => {
+                handleOnSetActive(link)
+              }}
+              className="cursor-pointer select-none"
+            >
               <Button
-                variant="ghost"
+                variant={Number(activeNav) === index ? 'primary' : 'ghost'}
                 className="inline-flex w-full justify-start dark:hover:bg-slate-700"
               >
                 {link.text}
               </Button>
-            </a>
+            </ScrollLink>
           ))}
         </div>
         <div className="bg-slate-900 px-4 py-2.5">
-          <Button variant="primary" size="sm" className="w-full rounded-full text-sm">
-            Contact
-          </Button>
+          <ScrollLink to="contact">
+            <Button variant="primary" size="sm" className="w-full rounded-full text-sm">
+              Contact
+            </Button>
+          </ScrollLink>
         </div>
       </PopoverContent>
     </Popover>

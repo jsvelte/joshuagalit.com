@@ -6,11 +6,11 @@ import React, { FC, ReactNode, useEffect, useState } from 'react'
 
 import { cn } from '~/utils/cn'
 import Layout from './../layout'
-import { nunito } from '~/utils/font'
 import { TLink } from '~/utils/types'
 import { Badge } from '~/components/atoms/badge'
 import { Button } from '~/components/atoms/button'
 import ScrollProgress from '~/lib/scroll-progress'
+import { LogoTitle } from '~/components/atoms/logo-title'
 
 type Props = {
   title: string
@@ -24,15 +24,18 @@ const BlogLayout: FC<Props> = ({ title, publishedAt, readTime, children }): JSX.
   const [links] = useState<TLink[]>([
     {
       text: 'Home',
-      href: '/'
+      href: '/',
+      offset: 0
     },
     {
       text: 'Projects',
-      href: '/#projects'
+      href: '/#projects',
+      offset: 0
     },
     {
       text: 'Blog',
-      href: '/blog'
+      href: '/blog',
+      offset: 0
     }
   ])
 
@@ -65,11 +68,7 @@ const BlogLayout: FC<Props> = ({ title, publishedAt, readTime, children }): JSX.
         >
           <div className="mx-auto flex w-full max-w-2xl flex-wrap items-center justify-between">
             <div className="flex flex-wrap items-center gap-x-4">
-              <Link href="/" className="outline-indigo-500">
-                <span className={cn(nunito.className, 'text-xl font-extrabold md:text-2xl')}>
-                  JoshG<span className="text-indigo-500">.</span>
-                </span>
-              </Link>
+              <LogoTitle />
               <nav>
                 <ul className="inline-flex flex-wrap items-center gap-x-2">
                   {links?.map((link, index) => (
