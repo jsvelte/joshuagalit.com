@@ -26,7 +26,7 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }): JSX.Element => {
       <div className={cn(openSans.className)}>
         <Component {...pageProps} />
       </div>
-      <FacebbokMessenger />
+      {process.env.NODE_ENV === 'production' && <FacebbokMessenger />}
     </ThemeProvider>
   )
 }

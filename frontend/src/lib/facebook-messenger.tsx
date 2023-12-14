@@ -1,10 +1,12 @@
 import React from 'react'
-import { FacebookProvider, CustomChat } from 'react-facebook'
+// @ts-expect-error: Temporary workaround for missing types in 'react-messenger-customer-chat' library
+import MessengerCustomerChat from 'react-messenger-customer-chat'
 
 export const FacebbokMessenger = (): JSX.Element => {
   return (
-    <FacebookProvider appId={process.env.MESSENGER_APP_ID as string} chatSupport>
-      <CustomChat pageId={process.env.MESSENGER_PAGE_ID as string} minimized={true} />
-    </FacebookProvider>
+    <MessengerCustomerChat
+      pageId={process.env.MESSENGER_APP_ID as string}
+      appId={process.env.MESSENGER_PAGE_ID as string}
+    />
   )
 }
