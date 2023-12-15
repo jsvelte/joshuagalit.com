@@ -2,11 +2,11 @@ import Aos from 'aos'
 import type { AppProps } from 'next/app'
 import { Toaster } from 'react-hot-toast'
 import React, { FC, useEffect } from 'react'
+// @ts-expect-error: Temporary workaround for missing types in 'react-messenger-customer-chat' library
+import MessengerCustomerChat from 'react-messenger-customer-chat'
 
 import '~/styles/globals.css'
-import { cn } from '~/utils/cn'
 import { openSans } from '~/utils/font'
-import FacebbokMessenger from '~/lib/facebook-messenger'
 import { ThemeProvider } from '~/components/templates/theme-provider'
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }): JSX.Element => {
@@ -18,16 +18,18 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }): JSX.Element => {
   }, [])
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <Toaster
-        position="bottom-center"
-        containerClassName={cn('font-medium text-sm', openSans.className)}
-      />
-      <div className={cn(openSans.className)}>
+    <div className={openSans.className}>
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <Toaster position="bottom-center" />
         <Component {...pageProps} />
-      </div>
-      {process.env.NODE_ENV === 'production' && <FacebbokMessenger />}
-    </ThemeProvider>
+        {process.env.NODE_ENV === 'production' && (
+          <MessengerCustomerChat
+            pageId={process.env.MESSENGER_PAGE_ID}
+            appId={process.env.MESSENGER_APP_ID}
+          />
+        )}
+      </ThemeProvider>
+    </div>
   )
 }
 
