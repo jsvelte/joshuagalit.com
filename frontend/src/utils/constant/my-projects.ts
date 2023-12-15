@@ -10,6 +10,25 @@ export interface IProject {
 
 export const myProjects: IProject[] = [
   {
+    imageUrl: 'https://utfs.io/f/3cf3d6ba-66b2-4e36-bbea-42f137017428-19a.PNG',
+    title: 'Notion Clone',
+    description:
+      'This website was created using Next.js 14, incorporating an app directory, TypeScript, Tailwind CSS, and Shadcn-UI + Edstore for file upload, along with a production-ready backend, Convex. It boasts a robust UI, secured by Clerk authentication, and represents a fully built application developed from scratch.',
+    rating: 5,
+    demoUrl: 'https://note-taking-app-wine.vercel.app/',
+    sourceCodeUrl: 'https://github.com/acatzk/notion-clone',
+    tags: [
+      'next.js',
+      'typescript',
+      'tailwindcss',
+      'shadcn-ui',
+      'convex',
+      'clerk',
+      'edgestore',
+      'production'
+    ]
+  },
+  {
     imageUrl: 'https://utfs.io/f/b8da1e05-ea64-4ae8-a309-e45baac19f12-1d.webp',
     title: 'MSI Tech Company Design',
     description:

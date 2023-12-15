@@ -46,13 +46,13 @@ export const myskills: Skill[] = [
     delay: 1200
   },
   {
-    title: 'Premiere Pro',
-    image: '/images/my-skills/premiere-pro.png',
+    title: 'Nodejs',
+    image: '/images/my-skills/nodejs.png',
     delay: 1300
   },
   {
-    title: 'Figma',
-    image: '/images/my-skills/figma.png',
+    title: 'Ruby on rails',
+    image: '/images/my-skills/ruby-on-rails.png',
     delay: 1400
   },
   {
@@ -66,18 +66,58 @@ export const myskills: Skill[] = [
     delay: 1600
   },
   {
-    title: 'GitHub',
-    image: '/images/my-skills/github.png',
+    title: 'Docker',
+    image: '/images/my-skills/docker.png',
     delay: 1700
-  },
-  {
-    title: 'Prisma',
-    image: '/images/my-skills/prisma.png',
-    delay: 1800
   },
   {
     title: 'MySQL',
     image: '/images/my-skills/mysql.png',
+    delay: 1800
+  },
+  {
+    title: 'GitHub',
+    image: '/images/my-skills/github.png',
     delay: 1900
+  },
+  {
+    title: 'Convex',
+    image: '/images/my-skills/convex.png',
+    delay: 2000
+  },
+  {
+    title: 'Prisma',
+    image: '/images/my-skills/prisma.png',
+    delay: 2100
+  },
+  {
+    title: 'Hasura',
+    image: '/images/my-skills/hasura.png',
+    delay: 2200
+  },
+  {
+    title: 'Firebase',
+    image: '/images/my-skills/firebase.png',
+    delay: 2300
+  },
+  {
+    title: 'tRPC',
+    image: '/images/my-skills/trpc.png',
+    delay: 2400
+  },
+  {
+    title: 'Figma',
+    image: '/images/my-skills/figma.png',
+    delay: 2500
+  },
+  {
+    title: 'Premiere Pro',
+    image: '/images/my-skills/premiere-pro.png',
+    delay: 2600
+  },
+  {
+    title: 'Photoshop',
+    image: '/images/my-skills/photoshop.png',
+    delay: 2700
   }
 ]
