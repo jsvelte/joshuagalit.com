@@ -54,6 +54,18 @@ export const testimonials: Testimony[] = [
     `,
     position: 'Web Developer at Sun Asterisk Philippines',
     companyImageUrl: '/images/company/sun-asterisk.png'
+  },
+  {
+    profileImageUrl: '/images/testimonials/gilchrist-calunia.png',
+    name: 'Gilchrist Calunia',
+    text: `
+      I had the pleasure of collaborating with Joshua on several video editing projects, and I must say, his expertise and dedication truly elevated our work. Joshua's proficiency in video editing is unparalleled. His keen eye for detail and creative flair brought life to our projects in ways we hadn't imagined.What stands out most about our collaboration is Joshua's remarkable teamwork. He seamlessly integrated ideas, welcomed suggestions, and contributed innovative solutions, making our editing process incredibly smooth and efficient. His ability to communicate effectively ensured that our visions aligned, resulting in exceptional outcomes.
+      <br />
+      <br />
+      Working alongside Joshua wasn't just about achieving project goals; it was also a learning experience. His willingness to share knowledge and skills enhanced our collective understanding of video editing techniques and trends. In conclusion, collaborating with Joshua was not only professionally rewarding but also a delightful journey filled with creativity, professionalism, and a shared passion for video editing. I look forward to future collaborations that undoubtedly promise excellence.
+    `,
+    position: 'Top Rated Video Editor Freelancer at Upwork',
+    companyImageUrl: '/images/company/upwork.png'
   }
   // {
   //   profileImageUrl: '/images/testimonials/abdul-jalil-palala.png',
