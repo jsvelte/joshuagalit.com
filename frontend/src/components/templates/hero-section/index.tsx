@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import CountUp from 'react-countup'
 import React, { FC, useState } from 'react'
 import { ArrowUp, Plus } from 'lucide-react'
 
@@ -188,7 +189,7 @@ function StackOverflowCardComp(): JSX.Element {
         <div className="px-6 py-3">
           <TropyIcon className="h-8 w-8 sm:h-14 sm:w-14" />
           <p className="pt-1 text-sm font-bold text-slate-800 dark:text-slate-300 sm:text-base">
-            1,149+ Stack Overflow Reputation
+            <CountUp start={1} end={1149} duration={4} enableScrollSpy />+ Stack Overflow Reputation
           </p>
         </div>
       </Card>
@@ -208,7 +209,9 @@ function ProjectNumberCardComp(): JSX.Element {
       >
         <div className="px-6 py-3">
           <div className="relative flex items-start text-indigo-500">
-            <h2 className="text-xl font-bold sm:text-3xl">25</h2>
+            <h2 className="text-xl font-bold sm:text-3xl">
+              <CountUp start={1} end={25} duration={6} enableScrollSpy />
+            </h2>
             <Plus size={14} strokeWidth="5" />
           </div>
           <p className="pt-1 text-sm font-bold text-slate-800 dark:text-slate-300 sm:text-base">
