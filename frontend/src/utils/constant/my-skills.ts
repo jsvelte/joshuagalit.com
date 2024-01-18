@@ -8,116 +8,116 @@ export const myskills: Skill[] = [
   {
     title: 'React',
     image: '/images/my-skills/react.png',
-    delay: 500
+    delay: 400
   },
   {
     title: 'TypeScript',
     image: '/images/my-skills/typescript.png',
-    delay: 600
+    delay: 450
   },
   {
     title: 'NextJS',
     image: '/images/my-skills/nextjs.png',
-    delay: 700
+    delay: 500
   },
   {
     title: 'Tailwindcss',
     image: '/images/my-skills/tailwindcss.png',
-    delay: 800
+    delay: 550
   },
   {
     title: 'GraphQL',
     image: '/images/my-skills/graphql.png',
-    delay: 900
+    delay: 600
   },
   {
     title: 'NestJS',
     image: '/images/my-skills/nestjs.png',
-    delay: 1000
+    delay: 650
   },
   {
     title: 'Laravel',
     image: '/images/my-skills/laravel.png',
-    delay: 1100
+    delay: 700
   },
   {
     title: 'CSharp',
     image: '/images/my-skills/c-sharp.png',
-    delay: 1200
+    delay: 750
   },
   {
     title: 'Nodejs',
     image: '/images/my-skills/nodejs.png',
-    delay: 1300
+    delay: 800
   },
   {
     title: 'Ruby on rails',
     image: '/images/my-skills/ruby-on-rails.png',
-    delay: 1400
+    delay: 850
   },
   {
     title: 'Git',
     image: '/images/my-skills/git.png',
-    delay: 1500
+    delay: 900
   },
   {
     title: 'AWS',
     image: '/images/my-skills/aws.png',
-    delay: 1600
+    delay: 950
   },
   {
     title: 'Docker',
     image: '/images/my-skills/docker.png',
-    delay: 1700
+    delay: 1000
   },
   {
     title: 'MySQL',
     image: '/images/my-skills/mysql.png',
-    delay: 1800
+    delay: 1050
   },
   {
     title: 'GitHub',
     image: '/images/my-skills/github.png',
-    delay: 1900
+    delay: 1100
   },
   {
     title: 'Convex',
     image: '/images/my-skills/convex.png',
-    delay: 2000
+    delay: 1150
   },
   {
     title: 'Prisma',
     image: '/images/my-skills/prisma.png',
-    delay: 2100
+    delay: 1200
   },
   {
     title: 'Hasura',
     image: '/images/my-skills/hasura.png',
-    delay: 2200
+    delay: 1250
   },
   {
     title: 'Firebase',
     image: '/images/my-skills/firebase.png',
-    delay: 2300
+    delay: 1300
   },
   {
     title: 'tRPC',
     image: '/images/my-skills/trpc.png',
-    delay: 2400
+    delay: 1350
   },
   {
     title: 'Figma',
     image: '/images/my-skills/figma.png',
-    delay: 2500
+    delay: 1400
   },
   {
     title: 'Premiere Pro',
     image: '/images/my-skills/premiere-pro.png',
-    delay: 2600
+    delay: 1450
   },
   {
     title: 'Photoshop',
     image: '/images/my-skills/photoshop.png',
-    delay: 2700
+    delay: 1500
   }
 ]

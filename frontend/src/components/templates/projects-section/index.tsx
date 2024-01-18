@@ -11,7 +11,7 @@ const ProjectsSection: FC<Record<string, unknown>> = (): JSX.Element => {
   const isMediumScreen = useScreenCondition('(max-width: 768px)')
 
   return (
-    <section id="projects" className="section-block transition-colors duration-700">
+    <section id="projects" className="section-block py-6 transition-colors duration-700">
       <div className="mx-auto mt-14 max-w-6xl px-4 py-14">
         <div className="flex justify-center" data-aos="fade-down" data-aos-delay="200">
           <SectionTitle title="Projects" />

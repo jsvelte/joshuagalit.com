@@ -75,7 +75,7 @@ const HeroSection: FC<Record<string, unknown>> = (): JSX.Element => {
             data-aos="fade-down"
             data-aos-delay="700"
           >
-            <a href="/pdf/resume-2.0.pdf" target="_blank" className="outline-none">
+            <a href="/pdf/josh-resume.pdf" target="_blank" className="outline-none">
               <Button
                 variant="primary"
                 className="px-10 py-6 text-base font-semibold md:px-14 md:py-7 md:text-lg"
@@ -105,17 +105,18 @@ const HeroSection: FC<Record<string, unknown>> = (): JSX.Element => {
           {/* My Profile */}
           <div
             className={cn(
-              'absolute -right-[100px] -top-[750px] z-10 rotate-[48deg]',
-              'scale-75 sm:-right-[180px] sm:-top-[1000px] sm:scale-125'
+              'absolute -right-[80px] -top-[750px] z-10 rotate-[38deg]',
+              'scale-75 sm:-right-[150px] sm:-top-[1000px] sm:scale-125'
             )}
           >
             <Image
-              src="/images/user/joshuagalit-banner.png"
+              src="/images/user/joshuagalit-banner-1.png"
               quality={100}
               width={400}
               height={400}
               priority
               style={{ width: 'auto', height: 'auto' }}
+              className="clip"
               alt="Profile"
             />
           </div>

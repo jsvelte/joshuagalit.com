@@ -25,11 +25,6 @@ const MySkillsSection: FC<Record<string, unknown>> = (): JSX.Element => {
           </div>
         ))}
       </div>
-      <div className="mt-16 text-center" data-aos="fade-up" data-aos-delay={2750}>
-        <a href="#my-skills" className="text-sm text-slate-400 hover:underline dark:text-slate-300">
-          Show more
-        </a>
-      </div>
     </section>
   )
 }
