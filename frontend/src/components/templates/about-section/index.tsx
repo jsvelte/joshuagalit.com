@@ -24,7 +24,7 @@ export default function AboutSection(): JSX.Element {
           </div>
           <div className="mt-4" data-aos="fade-down" data-aos-delay="700">
             <p className="section-p">
-              I&apos;m Josh, residing in the province of Bato, Leyte. With 2 years of freelancing
+              I&apos;m Josh, residing in the province of Leyte. With 2 years of freelancing
               experience in video editing and 1.4 years of full-time work as a web developer at Sun
               Asterisk Philippines, I possess expertise in Fullstack application development, web
               design, and video editing.
