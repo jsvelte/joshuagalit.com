@@ -1,14 +1,14 @@
-import React, { FC } from 'react'
+import React from 'react'
 
 import { cn } from '~/utils/cn'
 import { nunito } from '~/utils/font'
-import BubbleCircleIcon from '~/utils/icons/BubbleCircleIcon'
+import { BubbleCircleIcon } from '~/utils/icons/BubbleCircleIcon'
 
-type Props = {
+type SectionTitleProps = {
   title: string
 }
 
-const SectionTitle: FC<Props> = ({ title }): JSX.Element => {
+export const SectionTitle = ({ title }: SectionTitleProps): JSX.Element => {
   return (
     <div className="relative">
       <h2 className={cn('h2', nunito.className)}>{title}</h2>
@@ -16,5 +16,3 @@ const SectionTitle: FC<Props> = ({ title }): JSX.Element => {
     </div>
   )
 }
-
-export default SectionTitle

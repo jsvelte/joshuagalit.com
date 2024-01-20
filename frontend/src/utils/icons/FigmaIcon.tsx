@@ -1,8 +1,6 @@
-import React, { ComponentProps, FC } from 'react'
+import React, { ComponentProps } from 'react'
 
-type Props = ComponentProps<'svg'>
-
-const FigmaIcon: FC<Props> = (props): JSX.Element => {
+export const FigmaIcon = (props: ComponentProps<'svg'>): JSX.Element => {
   return (
     <svg {...props} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <g fill="none" fillRule="evenodd" transform="translate(4)">
@@ -27,5 +25,3 @@ const FigmaIcon: FC<Props> = (props): JSX.Element => {
     </svg>
   )
 }
-
-export default FigmaIcon

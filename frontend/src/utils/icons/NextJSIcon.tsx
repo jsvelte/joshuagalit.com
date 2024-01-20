@@ -1,8 +1,6 @@
-import React, { ComponentProps, FC } from 'react'
+import React, { ComponentProps } from 'react'
 
-type Props = ComponentProps<'svg'>
-
-const NextJSIcon: FC<Props> = (props): JSX.Element => {
+export const NextJSIcon = (props: ComponentProps<'svg'>): JSX.Element => {
   return (
     <svg
       {...props}
@@ -58,5 +56,3 @@ const NextJSIcon: FC<Props> = (props): JSX.Element => {
     </svg>
   )
 }
-
-export default NextJSIcon

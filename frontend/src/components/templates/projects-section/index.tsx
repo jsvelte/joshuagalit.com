@@ -1,13 +1,13 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCoverflow, Pagination } from 'swiper/modules'
 
 import { myProjects } from '~/utils/constant/my-projects'
 import useScreenCondition from '~/hooks/useScreenCondition'
-import ProjectCard from '~/components/molecules/project-card'
-import SectionTitle from '~/components/molecules/section-title'
+import { ProjectCard } from '~/components/molecules/project-card'
+import { SectionTitle } from '~/components/molecules/section-title'
 
-const ProjectsSection: FC<Record<string, unknown>> = (): JSX.Element => {
+export default function ProjectsSection(): JSX.Element {
   const isMediumScreen = useScreenCondition('(max-width: 768px)')
 
   return (
@@ -47,5 +47,3 @@ const ProjectsSection: FC<Record<string, unknown>> = (): JSX.Element => {
     </section>
   )
 }
-
-export default ProjectsSection

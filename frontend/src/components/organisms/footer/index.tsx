@@ -1,10 +1,10 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { Facebook, Linkedin } from 'lucide-react'
 
 import { cn } from '~/utils/cn'
 import { nunito } from '~/utils/font'
 
-const Footer: FC<Record<string, unknown>> = (): JSX.Element => {
+export const Footer = (): JSX.Element => {
   return (
     <footer data-aos="fade-up" data-aos-offset="0" className="mb-14">
       <div className="mx-auto w-full max-w-6xl px-4">
@@ -43,5 +43,3 @@ const Footer: FC<Record<string, unknown>> = (): JSX.Element => {
     </footer>
   )
 }
-
-export default Footer

@@ -1,10 +1,10 @@
+import React from 'react'
 import Image from 'next/image'
-import React, { FC } from 'react'
 
 import { cn } from '~/utils/cn'
 import { Skill } from '~/utils/constant/my-skills'
 
-const SkillCard: FC<Skill> = ({ title, image }): JSX.Element => {
+export const SkillCard = ({ title, image }: Skill): JSX.Element => {
   return (
     <div
       className={cn(
@@ -29,5 +29,3 @@ const SkillCard: FC<Skill> = ({ title, image }): JSX.Element => {
     </div>
   )
 }
-
-export default SkillCard

@@ -1,14 +1,14 @@
 import Head from 'next/head'
-import React, { FC, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 
 import { cn } from '~/utils/cn'
 
-type Props = {
+type LayoutProps = {
   metaTitle?: string
   children: ReactNode
 }
 
-const Layout: FC<Props> = ({ metaTitle, children }): JSX.Element => {
+export default function Layout({ metaTitle, children }: LayoutProps): JSX.Element {
   return (
     <div
       className={cn('overflow-hidden bg-white transition-colors', 'duration-700 dark:bg-slate-900')}
@@ -26,5 +26,3 @@ const Layout: FC<Props> = ({ metaTitle, children }): JSX.Element => {
     </div>
   )
 }
-
-export default Layout

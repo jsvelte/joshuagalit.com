@@ -2,11 +2,11 @@ import fs from 'fs'
 import React from 'react'
 import matter from 'gray-matter'
 import dynamic from 'next/dynamic'
-import type { GetStaticProps, NextPage } from 'next'
+import type { GetStaticProps } from 'next'
 
 import { Blog } from '~/utils/types'
 import Layout from '~/components/templates/layout'
-import Footer from '~/components/organisms/footer'
+import { Footer } from '~/components/organisms/footer'
 import { Separator } from '~/components/atoms/separator'
 import HeroSection from '~/components/templates/hero-section'
 import SocialLinkSection from '~/components/templates/social-link-section'
@@ -45,11 +45,11 @@ const ContactSection = dynamic(async () => await import('~/components/templates/
   ssr: false
 })
 
-type Props = {
+type IndexProps = {
   posts: Blog[]
 }
 
-const Index: NextPage<Props> = ({ posts }): JSX.Element => {
+export default function Index({ posts }: IndexProps): JSX.Element {
   return (
     <Layout>
       <HeroSection />
@@ -94,5 +94,3 @@ export const getStaticProps: GetStaticProps = () => {
     }
   }
 }
-
-export default Index

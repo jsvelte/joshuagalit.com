@@ -1,5 +1,5 @@
+import React from 'react'
 import Image from 'next/image'
-import React, { FC } from 'react'
 import { Github, Link, Star } from 'lucide-react'
 
 import { cn } from '~/utils/cn'
@@ -10,11 +10,11 @@ import { IProject } from '~/utils/constant/my-projects'
 import useScreenCondition from '~/hooks/useScreenCondition'
 import { Card, CardContent, CardTitle } from '~/components/atoms/card'
 
-type Props = {
+type ProjectCardProps = {
   project: IProject
 }
 
-const ProjectCard: FC<Props> = ({ project }): JSX.Element => {
+export const ProjectCard = ({ project }: ProjectCardProps): JSX.Element => {
   const { title, description, demoUrl, imageUrl, rating, sourceCodeUrl, tags } = project
 
   const isMediumScreen = useScreenCondition('(max-width: 768px)')
@@ -74,5 +74,3 @@ const ProjectCard: FC<Props> = ({ project }): JSX.Element => {
     </Card>
   )
 }
-
-export default ProjectCard

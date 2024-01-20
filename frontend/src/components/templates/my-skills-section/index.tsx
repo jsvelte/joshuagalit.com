@@ -1,10 +1,10 @@
-import React, { FC } from 'react'
+import React from 'react'
 
 import { myskills } from '~/utils/constant/my-skills'
-import SkillCard from '~/components/molecules/skill-card'
-import SectionTitle from '~/components/molecules/section-title'
+import { SkillCard } from '~/components/molecules/skill-card'
+import { SectionTitle } from '~/components/molecules/section-title'
 
-const MySkillsSection: FC<Record<string, unknown>> = (): JSX.Element => {
+export default function MySkillsSection(): JSX.Element {
   return (
     <section id="my-skills" className="section">
       {/* Title */}
@@ -28,5 +28,3 @@ const MySkillsSection: FC<Record<string, unknown>> = (): JSX.Element => {
     </section>
   )
 }
-
-export default MySkillsSection

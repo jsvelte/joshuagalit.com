@@ -1,16 +1,16 @@
+import React from 'react'
 import Image from 'next/image'
-import React, { FC } from 'react'
 
 import { cn } from '~/utils/cn'
 import { oleoScript } from '~/utils/font'
 import { Card } from '~/components/atoms/card'
 import { Testimony } from '~/utils/constant/testimonials'
 
-type Props = {
+type TestimonialCardProps = {
   testimony: Testimony
 }
 
-const TestimonialCard: FC<Props> = ({ testimony }): JSX.Element => {
+export const TestimonialCard = ({ testimony }: TestimonialCardProps): JSX.Element => {
   return (
     <Card className="relative mx-auto flex w-full max-w-3xl flex-col items-center justify-center overflow-visible rounded-[40px] dark:bg-slate-900">
       <p
@@ -46,5 +46,3 @@ const TestimonialCard: FC<Props> = ({ testimony }): JSX.Element => {
     </Card>
   )
 }
-
-export default TestimonialCard
