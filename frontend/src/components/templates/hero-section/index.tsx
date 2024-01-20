@@ -1,19 +1,19 @@
 import Image from 'next/image'
-import CountUp from 'react-countup'
+import { ArrowUp } from 'lucide-react'
 import React, { useState } from 'react'
-import { ArrowUp, Plus } from 'lucide-react'
 
 import { cn } from '~/utils/cn'
 import { TLink } from '~/utils/types'
 import { nunito } from '~/utils/font'
-import { Card } from '~/components/atoms/card'
 import { Button } from '~/components/atoms/button'
-import { TropyIcon } from '~/utils/icons/TropyIcon'
-import { FigmaIcon } from '~/utils/icons/FigmaIcon'
-import { NextJSIcon } from '~/utils/icons/NextJSIcon'
 import { Header } from '~/components/organisms/header'
-import { TailwindcssIcon } from '~/utils/icons/TailwindcssIcon'
 import { BubbleCircleIcon } from '~/utils/icons/BubbleCircleIcon'
+
+import { FigmaIcon } from './figma-icon'
+import { NextJSIcon } from './nextjs-icon'
+import { TailwindIcon } from './tailwind-icon'
+import { StackOverflowCard } from './stackoverflow-card'
+import { ProjectNumberCard } from './project-number-card'
 
 export default function HeroSection(): JSX.Element {
   const [links] = useState<TLink[]>([
@@ -121,105 +121,17 @@ export default function HeroSection(): JSX.Element {
             />
           </div>
           {/* Tailwindcss Icon */}
-          <TailwindIconComp />
+          <TailwindIcon />
           {/* NextJS Icon */}
-          <NextJSIconComp />
+          <NextJSIcon />
           {/* Figma Icon */}
-          <FigmaIconComp />
+          <FigmaIcon />
           {/* Stack Overflow Card */}
-          <StackOverflowCardComp />
+          <StackOverflowCard />
           {/* Number of Projects Card */}
-          <ProjectNumberCardComp />
+          <ProjectNumberCard />
         </div>
       </div>
     </section>
-  )
-}
-
-function TailwindIconComp(): JSX.Element {
-  return (
-    <div
-      className={cn(
-        'absolute bottom-[220px] right-[250px] z-10 rounded-full p-2.5',
-        'shadow-md dark:bg-slate-800 sm:bottom-[220px] sm:right-[470px]',
-        'transition-colors duration-700'
-      )}
-    >
-      <TailwindcssIcon className="h-12 w-12 text-[#38bdf8]" />
-    </div>
-  )
-}
-
-function NextJSIconComp(): JSX.Element {
-  return (
-    <div>
-      <NextJSIcon
-        className={cn(
-          'absolute bottom-[250px] right-[30px] z-10 h-20',
-          'w-20 scale-75 text-black sm:right-[80px] sm:scale-100'
-        )}
-      />
-    </div>
-  )
-}
-
-function FigmaIconComp(): JSX.Element {
-  return (
-    <div
-      className={cn(
-        'absolute bottom-[90px] right-[40px] z-10 rounded-full',
-        'bg-slate-200 p-2.5 shadow-md dark:bg-slate-800',
-        'transition-colors duration-700'
-      )}
-    >
-      <FigmaIcon className="h-9 w-9 sm:h-12 sm:w-12" />
-    </div>
-  )
-}
-
-function StackOverflowCardComp(): JSX.Element {
-  return (
-    <div className="absolute right-0 z-10">
-      <Card
-        className={cn(
-          'relative w-full max-w-[240px] border border-slate-200 backdrop-blur-xl',
-          'bg-[#FDFDFD]/50 blur-none hover:bg-[#FDFDFD]/80 dark:border-slate-700',
-          'transition-colors duration-700 dark:bg-slate-900/50 hover:dark:bg-slate-900/80'
-        )}
-      >
-        <div className="px-6 py-3">
-          <TropyIcon className="h-8 w-8 sm:h-14 sm:w-14" />
-          <p className="pt-1 text-sm font-bold text-slate-800 dark:text-slate-300 sm:text-base">
-            <CountUp start={1} end={1149} duration={4} enableScrollSpy />+ Stack Overflow Reputation
-          </p>
-        </div>
-      </Card>
-    </div>
-  )
-}
-
-function ProjectNumberCardComp(): JSX.Element {
-  return (
-    <div className="absolute right-[350px] z-10 sm:right-[400px]">
-      <Card
-        className={cn(
-          'relative w-full max-w-[240px] border border-slate-200 backdrop-blur-xl',
-          'bg-[#FDFDFD]/50 blur-none hover:bg-[#FDFDFD]/80 dark:border-slate-700',
-          'transition-colors duration-700 dark:bg-slate-900/50 hover:dark:bg-slate-900/80'
-        )}
-      >
-        <div className="px-6 py-3">
-          <div className="relative flex items-start text-indigo-500">
-            <h2 className="text-xl font-bold sm:text-3xl">
-              <CountUp start={1} end={25} duration={6} enableScrollSpy />
-            </h2>
-            <Plus size={14} strokeWidth="5" />
-          </div>
-          <p className="pt-1 text-sm font-bold text-slate-800 dark:text-slate-300 sm:text-base">
-            Completed Projects
-          </p>
-        </div>
-      </Card>
-    </div>
   )
 }
