@@ -1,7 +1,7 @@
 import Aos from 'aos'
+import React, { useEffect } from 'react'
 import type { AppProps } from 'next/app'
 import { Toaster } from 'react-hot-toast'
-import React, { FC, useEffect } from 'react'
 // @ts-expect-error: Temporary workaround for missing types in 'react-messenger-customer-chat' library
 import MessengerCustomerChat from 'react-messenger-customer-chat'
 
@@ -9,7 +9,7 @@ import '~/styles/globals.css'
 import { openSans } from '~/utils/font'
 import { ThemeProvider } from '~/components/templates/theme-provider'
 
-const MyApp: FC<AppProps> = ({ Component, pageProps }): JSX.Element => {
+export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   useEffect(() => {
     Aos.init({
       duration: 1800,
@@ -32,5 +32,3 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }): JSX.Element => {
     </div>
   )
 }
-
-export default MyApp

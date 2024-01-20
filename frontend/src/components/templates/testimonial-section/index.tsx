@@ -1,12 +1,12 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper/modules'
 
 import { testimonials } from '~/utils/constant/testimonials'
-import SectionTitle from '~/components/molecules/section-title'
-import TestimonialCard from '~/components/molecules/testimonial-card'
+import { SectionTitle } from '~/components/molecules/section-title'
+import { TestimonialCard } from '~/components/molecules/testimonial-card'
 
-const TestimonialSection: FC<Record<string, unknown>> = (): JSX.Element => {
+export default function TestimonialSection(): JSX.Element {
   return (
     <section id="testimonial" className="section-block transition-colors duration-700">
       <div className="section">
@@ -38,5 +38,3 @@ const TestimonialSection: FC<Record<string, unknown>> = (): JSX.Element => {
     </section>
   )
 }
-
-export default TestimonialSection

@@ -1,9 +1,9 @@
-import React, { FC } from 'react'
+import React from 'react'
 
 import { cn } from '~/utils/cn'
 import { socialLinks } from '~/utils/constant/socialLinks'
 
-const SocialLinkSection: FC<Record<string, unknown>> = (): JSX.Element => {
+export default function SocialLinkSection(): JSX.Element {
   return (
     <section
       className="section mt-24 grid grid-cols-2 gap-4 px-4 py-4 sm:mt-8 sm:grid-cols-4"
@@ -26,5 +26,3 @@ const SocialLinkSection: FC<Record<string, unknown>> = (): JSX.Element => {
     </section>
   )
 }
-
-export default SocialLinkSection

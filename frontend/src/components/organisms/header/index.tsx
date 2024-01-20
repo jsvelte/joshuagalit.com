@@ -1,20 +1,20 @@
 import { useTheme } from 'next-themes'
 import { Link as ScrollLink } from 'react-scroll'
+import React, { useEffect, useState } from 'react'
 import DarkModeToggle from 'react-dark-mode-toggle'
-import React, { FC, useEffect, useState } from 'react'
 
 import { cn } from '~/utils/cn'
 import { TLink } from '~/utils/types'
 import { Button } from '~/components/atoms/button'
 import { LogoTitle } from '~/components/atoms/logo-title'
 import useScreenCondition from '~/hooks/useScreenCondition'
-import NavPopover from '~/components/molecules/nav-popover/NavPopover'
+import { NavPopover } from '~/components/molecules/nav-popover/NavPopover'
 
-type Props = {
+type HeaderProps = {
   links: TLink[]
 }
 
-const Header: FC<Props> = ({ links }): JSX.Element => {
+export const Header = ({ links }: HeaderProps): JSX.Element => {
   const { theme, setTheme } = useTheme()
   const isMediumScreen = useScreenCondition('(max-width: 768px)')
 
@@ -117,5 +117,3 @@ const Header: FC<Props> = ({ links }): JSX.Element => {
     </div>
   )
 }
-
-export default Header

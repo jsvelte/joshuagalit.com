@@ -2,20 +2,20 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import { ParsedUrlQuery } from 'querystring'
 import React, { useEffect, useState } from 'react'
-import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import { GetStaticPaths, GetStaticProps } from 'next'
 
 import { FrontMatter } from '~/utils/types'
+import MarkdownRender from '~/lib/markdown-render'
 import calculateReadTime from '~/utils/readTimeDuration'
 import BlogLayout from '~/components/templates/blog-layout'
-import MarkdownRender from '~/lib/markdown-render'
 
-type Props = {
+type BlogProps = {
   frontMatter: FrontMatter
   content: string
   readTime: number
 }
 
-const Blog: NextPage<Props> = ({ frontMatter, content, readTime }): JSX.Element => {
+export default function Blog({ frontMatter, content, readTime }: BlogProps): JSX.Element {
   const [renderedContent, setRenderedContent] = useState<string>('')
 
   useEffect(() => {
@@ -67,5 +67,3 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
   }
 }
-
-export default Blog

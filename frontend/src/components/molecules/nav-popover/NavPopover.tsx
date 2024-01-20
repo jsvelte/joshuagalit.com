@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { Menu } from 'lucide-react'
 import { Link as ScrollLink } from 'react-scroll'
 
@@ -6,13 +6,15 @@ import { TLink } from '~/utils/types'
 import { Button } from '~/components/atoms/button'
 import { Popover, PopoverContent, PopoverTrigger } from '~/components/templates/popover'
 
-type Props = {
+type NavPopoverProps = {
   links: TLink[]
   activeNav: number | null
   handleOnSetActive: (link: TLink) => void
 }
 
-const NavPopover: FC<Props> = ({ links, activeNav, handleOnSetActive }): JSX.Element => {
+export const NavPopover = (props: NavPopoverProps): JSX.Element => {
+  const { links, activeNav, handleOnSetActive } = props
+
   return (
     <Popover>
       <PopoverTrigger asChild>
@@ -58,5 +60,3 @@ const NavPopover: FC<Props> = ({ links, activeNav, handleOnSetActive }): JSX.Ele
     </Popover>
   )
 }
-
-export default NavPopover

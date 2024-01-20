@@ -1,18 +1,18 @@
+import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import React, { FC } from 'react'
 import { ChevronRight } from 'lucide-react'
 
 import { cn } from '~/utils/cn'
 import { Blog } from '~/utils/types'
 import { Badge } from '~/components/atoms/badge'
 
-type Props = {
+type BlogCardProps = {
   blog: Blog
   idx: number
 }
 
-const BlogCard: FC<Props> = ({ blog, idx }): JSX.Element => {
+export const BlogCard = ({ blog, idx }: BlogCardProps): JSX.Element => {
   const index = idx + 1
   return (
     <div
@@ -60,5 +60,3 @@ const BlogCard: FC<Props> = ({ blog, idx }): JSX.Element => {
     </div>
   )
 }
-
-export default BlogCard

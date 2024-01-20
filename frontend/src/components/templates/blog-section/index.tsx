@@ -1,16 +1,16 @@
-import React, { FC } from 'react'
+import React from 'react'
 
 import { Blog } from '~/utils/types'
 import { Button } from '~/components/atoms/button'
-import BlogCard from '~/components/molecules/blog-card'
+import { BlogCard } from '~/components/molecules/blog-card'
 import useScreenCondition from '~/hooks/useScreenCondition'
-import SectionTitle from '~/components/molecules/section-title'
+import { SectionTitle } from '~/components/molecules/section-title'
 
-type Props = {
+type BlogSectionProps = {
   posts: Blog[]
 }
 
-const BlogSection: FC<Props> = ({ posts }): JSX.Element => {
+export default function BlogSection({ posts }: BlogSectionProps): JSX.Element {
   const isMediumScreen = useScreenCondition('(max-width: 768px)')
 
   return (
@@ -44,5 +44,3 @@ const BlogSection: FC<Props> = ({ posts }): JSX.Element => {
     </section>
   )
 }
-
-export default BlogSection

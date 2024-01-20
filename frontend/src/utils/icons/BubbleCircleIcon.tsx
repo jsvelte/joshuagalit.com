@@ -1,8 +1,6 @@
-import React, { ComponentProps, FC } from 'react'
+import React, { ComponentProps } from 'react'
 
-type Props = ComponentProps<'svg'>
-
-const BubbleCircleIcon: FC<Props> = (props): JSX.Element => {
+export const BubbleCircleIcon = (props: ComponentProps<'svg'>): JSX.Element => {
   return (
     <svg
       width="98"
@@ -35,5 +33,3 @@ const BubbleCircleIcon: FC<Props> = (props): JSX.Element => {
     </svg>
   )
 }
-
-export default BubbleCircleIcon

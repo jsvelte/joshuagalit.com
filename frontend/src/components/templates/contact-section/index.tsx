@@ -1,10 +1,10 @@
-import React, { FC } from 'react'
+import React from 'react'
 
 import { cn } from '~/utils/cn'
 import { Button } from '~/components/atoms/button'
-import SectionTitle from '~/components/molecules/section-title'
+import { SectionTitle } from '~/components/molecules/section-title'
 
-const ContactSection: FC<Record<string, unknown>> = (): JSX.Element => {
+export default function ContactSection(): JSX.Element {
   return (
     <section id="contact" className="mx-auto w-full max-w-6xl px-4 py-16">
       <div
@@ -70,5 +70,3 @@ const ContactSection: FC<Record<string, unknown>> = (): JSX.Element => {
     </section>
   )
 }
-
-export default ContactSection

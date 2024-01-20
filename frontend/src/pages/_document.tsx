@@ -1,7 +1,7 @@
 import React from 'react'
 import { Html, Head, Main, NextScript } from 'next/document'
 
-const Document = (): JSX.Element => {
+export default function Document(): JSX.Element {
   return (
     <Html className="scroll-smooth" lang="en">
       <Head>
@@ -16,5 +16,3 @@ const Document = (): JSX.Element => {
     </Html>
   )
 }
-
-export default Document

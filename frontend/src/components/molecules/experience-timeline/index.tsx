@@ -1,14 +1,14 @@
-import React, { FC } from 'react'
+import React from 'react'
 
 import { cn } from '~/utils/cn'
 import { nunito } from '~/utils/font'
 import { Experience } from '~/utils/constant/experiences'
 
-type Props = {
+type ExperienceTimeLineProps = {
   exp: Experience
 }
 
-const ExperienceTimeLine: FC<Props> = ({ exp }): JSX.Element => {
+export const ExperienceTimeLine = ({ exp }: ExperienceTimeLineProps): JSX.Element => {
   return (
     <div
       className="relative mt-16 flex items-start gap-x-6 sm:gap-x-12 md:gap-x-24"
@@ -52,5 +52,3 @@ const ExperienceTimeLine: FC<Props> = ({ exp }): JSX.Element => {
     </div>
   )
 }
-
-export default ExperienceTimeLine

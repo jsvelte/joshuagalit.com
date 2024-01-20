@@ -1,8 +1,6 @@
-import React, { ComponentProps, FC } from 'react'
+import React, { ComponentProps } from 'react'
 
-type Props = ComponentProps<'svg'>
-
-const TropyIcon: FC<Props> = (props): JSX.Element => {
+export const TropyIcon = (props: ComponentProps<'svg'>): JSX.Element => {
   return (
     <svg
       {...props}
@@ -25,5 +23,3 @@ const TropyIcon: FC<Props> = (props): JSX.Element => {
     </svg>
   )
 }
-
-export default TropyIcon

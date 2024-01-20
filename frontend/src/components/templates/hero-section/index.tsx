@@ -1,21 +1,21 @@
 import Image from 'next/image'
 import CountUp from 'react-countup'
-import React, { FC, useState } from 'react'
+import React, { useState } from 'react'
 import { ArrowUp, Plus } from 'lucide-react'
 
 import { cn } from '~/utils/cn'
 import { TLink } from '~/utils/types'
 import { nunito } from '~/utils/font'
 import { Card } from '~/components/atoms/card'
-import TropyIcon from '~/utils/icons/TropyIcon'
-import FigmaIcon from '~/utils/icons/FigmaIcon'
-import NextJSIcon from '~/utils/icons/NextJSIcon'
 import { Button } from '~/components/atoms/button'
-import Header from '~/components/organisms/header'
-import TailwindcssIcon from '~/utils/icons/TailwindcssIcon'
-import BubbleCircleIcon from '~/utils/icons/BubbleCircleIcon'
+import { TropyIcon } from '~/utils/icons/TropyIcon'
+import { FigmaIcon } from '~/utils/icons/FigmaIcon'
+import { NextJSIcon } from '~/utils/icons/NextJSIcon'
+import { Header } from '~/components/organisms/header'
+import { TailwindcssIcon } from '~/utils/icons/TailwindcssIcon'
+import { BubbleCircleIcon } from '~/utils/icons/BubbleCircleIcon'
 
-const HeroSection: FC<Record<string, unknown>> = (): JSX.Element => {
+export default function HeroSection(): JSX.Element {
   const [links] = useState<TLink[]>([
     {
       text: 'Home',
@@ -106,7 +106,7 @@ const HeroSection: FC<Record<string, unknown>> = (): JSX.Element => {
           <div
             className={cn(
               'absolute -right-[80px] -top-[750px] z-10 rotate-[38deg]',
-              'scale-75 sm:-right-[150px] sm:-top-[1000px] sm:scale-125'
+              'scale-75 sm:-right-[150px] sm:-top-[1050px] sm:scale-125'
             )}
           >
             <Image
@@ -141,7 +141,7 @@ function TailwindIconComp(): JSX.Element {
     <div
       className={cn(
         'absolute bottom-[220px] right-[250px] z-10 rounded-full p-2.5',
-        'shadow-md dark:bg-slate-800 sm:bottom-[220px] sm:right-[450px]',
+        'shadow-md dark:bg-slate-800 sm:bottom-[220px] sm:right-[470px]',
         'transition-colors duration-700'
       )}
     >
@@ -155,7 +155,7 @@ function NextJSIconComp(): JSX.Element {
     <div>
       <NextJSIcon
         className={cn(
-          'absolute bottom-[210px] right-[30px] z-10 h-20',
+          'absolute bottom-[250px] right-[30px] z-10 h-20',
           'w-20 scale-75 text-black sm:right-[80px] sm:scale-100'
         )}
       />
@@ -167,7 +167,7 @@ function FigmaIconComp(): JSX.Element {
   return (
     <div
       className={cn(
-        'absolute bottom-[80px] right-[40px] z-10 rounded-full',
+        'absolute bottom-[90px] right-[40px] z-10 rounded-full',
         'bg-slate-200 p-2.5 shadow-md dark:bg-slate-800',
         'transition-colors duration-700'
       )}
@@ -223,5 +223,3 @@ function ProjectNumberCardComp(): JSX.Element {
     </div>
   )
 }
-
-export default HeroSection

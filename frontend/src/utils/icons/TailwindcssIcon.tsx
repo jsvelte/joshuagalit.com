@@ -1,8 +1,6 @@
-import React, { ComponentProps, FC } from 'react'
+import React, { ComponentProps } from 'react'
 
-type Props = ComponentProps<'svg'>
-
-const TailwindcssIcon: FC<Props> = (props): JSX.Element => {
+export const TailwindcssIcon = (props: ComponentProps<'svg'>): JSX.Element => {
   return (
     <svg
       {...props}
@@ -16,5 +14,3 @@ const TailwindcssIcon: FC<Props> = (props): JSX.Element => {
     </svg>
   )
 }
-
-export default TailwindcssIcon

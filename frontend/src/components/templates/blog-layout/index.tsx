@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
 import DarkModeToggle from 'react-dark-mode-toggle'
-import React, { FC, ReactNode, useEffect, useState } from 'react'
+import React, { ReactNode, useEffect, useState } from 'react'
 
 import { cn } from '~/utils/cn'
 import Layout from './../layout'
@@ -12,14 +12,16 @@ import { Button } from '~/components/atoms/button'
 import ScrollProgress from '~/lib/scroll-progress'
 import { LogoTitle } from '~/components/atoms/logo-title'
 
-type Props = {
+type BlogLayoutProps = {
   title: string
   publishedAt: string
   readTime: number
   children: ReactNode
 }
 
-const BlogLayout: FC<Props> = ({ title, publishedAt, readTime, children }): JSX.Element => {
+export default function BlogLayout(props: BlogLayoutProps): JSX.Element {
+  const { title, publishedAt, readTime, children } = props
+
   const [header, setHeader] = useState<boolean>(false)
   const [links] = useState<TLink[]>([
     {
@@ -126,5 +128,3 @@ const BlogLayout: FC<Props> = ({ title, publishedAt, readTime, children }): JSX.
     </Layout>
   )
 }
-
-export default BlogLayout

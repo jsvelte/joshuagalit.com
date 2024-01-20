@@ -1,9 +1,9 @@
+import React from 'react'
 import Image from 'next/image'
-import React, { FC } from 'react'
 
-import SectionTitle from '~/components/molecules/section-title'
+import { SectionTitle } from '~/components/molecules/section-title'
 
-const AboutSection: FC<Record<string, unknown>> = (): JSX.Element => {
+export default function AboutSection(): JSX.Element {
   return (
     <section id="about" className="section">
       <div className="grid grid-cols-1 gap-x-8 md:grid-cols-2">
@@ -38,5 +38,3 @@ const AboutSection: FC<Record<string, unknown>> = (): JSX.Element => {
     </section>
   )
 }
-
-export default AboutSection

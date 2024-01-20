@@ -1,10 +1,10 @@
-import React, { FC, useState } from 'react'
+import React, { useState } from 'react'
 
 import { experiences } from '~/utils/constant/experiences'
-import SectionTitle from '~/components/molecules/section-title'
-import ExperienceTimeLine from '~/components/molecules/experience-timeline'
+import { SectionTitle } from '~/components/molecules/section-title'
+import { ExperienceTimeLine } from '~/components/molecules/experience-timeline'
 
-const ExperienceSection: FC<Record<string, unknown>> = (): JSX.Element => {
+export default function ExperienceSection(): JSX.Element {
   const [showAllExperiences, setShowAllExperiences] = useState(true)
 
   const visibleExperiences = showAllExperiences ? experiences : experiences.slice(0, 2)
@@ -40,5 +40,3 @@ const ExperienceSection: FC<Record<string, unknown>> = (): JSX.Element => {
     </section>
   )
 }
-
-export default ExperienceSection
