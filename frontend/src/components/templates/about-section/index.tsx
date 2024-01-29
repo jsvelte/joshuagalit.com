@@ -24,13 +24,14 @@ export default function AboutSection(): JSX.Element {
           </div>
           <div className="mt-4" data-aos="fade-down" data-aos-delay="700">
             <p className="section-p">
-              I&apos;m Josh, residing in the province of Leyte. With 2 years of freelancing
-              experience in video editing and 1.4 years of full-time work as a web developer at Sun
-              Asterisk Philippines, I possess expertise in Fullstack application development, web
-              design, and video editing.
+              I&apos;m Josh, currently based in the province of Leyte. With over 2 years of hands-on
+              experience in web development, including 1+ year of freelancing, I bring a wealth of
+              expertise to the table. I thrive in high-pressure environments, showcase adaptability
+              in various situations, and exhibit flexibility in my role.
               <br />
-              <br />I excel at working under pressure, am highly adaptable in various situations,
-              and demonstrate flexibility in my job. Consider hiring me for your needs!
+              <br />
+              If you&apos;re looking for a professional with a solid background in web development
+              and a creative touch in video editing, consider me for your needs!
             </p>
           </div>
         </div>
