@@ -10,6 +10,25 @@ export interface IProject {
 
 export const myProjects: IProject[] = [
   {
+    imageUrl: 'https://utfs.io/f/81df6788-8353-423e-9cca-566a0d8a5559-foyl3p.png',
+    title: 'Meme me 2.0',
+    description:
+      'Inspired by social media websites, I enjoyed building my own social network that draws references from TikTok, Facebook, Twitter, and Instagram. The platform allows users to log in with their social accounts, upload posts, like, comment, and more. The project is still ongoing.',
+    rating: 5,
+    demoUrl: 'https://meme-me-2-0.vercel.app/',
+    sourceCodeUrl: 'https://github.com/acatzk/meme-me-2.0',
+    tags: [
+      'next.js 14 app',
+      'typescript',
+      'tailwindcss',
+      'shadcn-ui',
+      'prisma',
+      'clerk auth',
+      'tRPC',
+      'supabase'
+    ]
+  },
+  {
     imageUrl: 'https://utfs.io/f/3cf3d6ba-66b2-4e36-bbea-42f137017428-19a.PNG',
     title: 'Notion Clone',
     description:
