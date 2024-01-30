@@ -75,12 +75,12 @@ export default function HeroSection(): JSX.Element {
             data-aos="fade-down"
             data-aos-delay="700"
           >
-            <a href="/pdf/josh-resume.pdf" target="_blank" className="outline-none">
+            <a href="/pdf/josh-resume-updated.pdf" target="_blank" className="outline-none">
               <Button
                 variant="primary"
                 className="px-10 py-6 text-base font-semibold md:px-14 md:py-7 md:text-lg"
               >
-                Hire Me
+                Resume
               </Button>
             </a>
             <a href="#projects">

@@ -34,13 +34,10 @@ export const experiences: Experience[] = [
       <br />
       <br />I also became experienced in deploying websites using services like AWS Fargate,
       Amplify, and Vercel. Additionally, I took care of maintaining the websites, making
-      sure they worked well and looked good on different devices and browsers. I also became
-      good at testing the websites to ensure they worked perfectly.
+      sure they worked well and looked good on different devices and browsers.
       <br />
       <br />
-      My main expertise is in creating the visual part of websites using React and Tailwind
-      CSS, but I&apos;m also comfortable working with different backend technologies. My time at
-      Sun Asterisk taught me a lot about building websites from start to finish, and I&apos;m
+      My time at  Sun Asterisk taught me a lot about building websites from start to finish, and I&apos;m
       excited to bring this knowledge to new projects.
     `,
     yearFrom: 2022,
@@ -49,20 +46,17 @@ export const experiences: Experience[] = [
   },
   {
     id: 2,
-    jobTitle: 'Freelance Video Editor',
+    jobTitle: 'Freelance Web Developer & Video Editor',
     company: {
       name: 'Upwork',
       image: '/images/experience/upwork.png',
       position: 'Freelancer'
     },
     description: `
-      I freelanced with my friend from September 2020 to July 2022, exclusively using Premiere Pro as my video editing platform. My friend, a top-rated video editor on Upwork, hired us to collaborate on projects with international clients.
+      I freelanced as a Web Developer and Video Editor on Upwork. Specializing in Premiere Pro, I collaborated on top-rated video projects, with some videos reaching millions of views. Simultaneously, I worked on diverse web development projects, creating responsive and feature-rich websites. 
       <br />
-      <br />
-      We created diverse content, from motivational videos to topic-based content. Some of the videos I crafted for his channel reached millions of views, which filled me with pride.
-      <br />
-      <br />
-      Working closely with clients and using my skills in Premiere Pro was a fulfilling experience during my freelancing journey.
+       <br />
+      This dual experience enhanced my skills in both fields, allowing me to deliver exceptional results while working closely with clients to meet their unique needs.
     `,
     yearFrom: 2020,
     yearTo: 2022,
