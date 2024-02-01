@@ -48,6 +48,16 @@ export const myProjects: IProject[] = [
     ]
   },
   {
+    imageUrl: 'https://utfs.io/f/82392051-3ca2-48b5-8b39-3930fd79b792-95fcog.png',
+    title: 'Chain Sniper Design',
+    description:
+      'The company tested me by assigning the Figma UI task, and I subsequently developed the actual design. This website was built using Next.js 14, incorporating an app directory, TypeScript, Tailwind CSS, and Shadcn-UI.',
+    rating: 5,
+    demoUrl: 'https://chainsniper-test.vercel.app/',
+    sourceCodeUrl: 'https://github.com/acatzk/chainsniper-test',
+    tags: ['next.js', 'typescript', 'tailwindcss', 'shadcn-ui']
+  },
+  {
     imageUrl: 'https://utfs.io/f/b8da1e05-ea64-4ae8-a309-e45baac19f12-1d.webp',
     title: 'MSI Tech Company Design',
     description:
