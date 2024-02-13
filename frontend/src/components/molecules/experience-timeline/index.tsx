@@ -21,7 +21,7 @@ export const ExperienceTimeLine = ({ exp }: ExperienceTimeLineProps): JSX.Elemen
           <span className="relative z-20 px-2 py-1.5 text-sm font-bold">
             {cn(exp.yearFrom + ' - ' + exp.yearTo)}
           </span>
-          <span className="absolute -right-2 top-1.5 rotate-45 bg-slate-100 p-2.5 dark:bg-slate-800"></span>
+          <span className="absolute -right-2 top-0.5 rotate-45 bg-slate-100 p-2.5 dark:bg-slate-800"></span>
         </div>
         <div className="flex flex-col items-center space-y-6">
           <span className="h-6 w-6 rounded-full bg-sky-500"></span>
