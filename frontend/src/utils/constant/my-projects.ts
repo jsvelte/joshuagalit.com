@@ -48,7 +48,7 @@ export const myProjects: IProject[] = [
     ]
   },
   {
-    imageUrl: 'https://utfs.io/f/82392051-3ca2-48b5-8b39-3930fd79b792-95fcog.png',
+    imageUrl: 'https://utfs.io/f/30f2e2bd-67aa-4870-aadd-f3148d6f1e32-19b.png',
     title: 'Chain Sniper Design',
     description:
       'The company tested me by assigning the Figma UI task, and I subsequently developed the actual design. This website was built using Next.js 14, incorporating an app directory, TypeScript, Tailwind CSS, and Shadcn-UI.',

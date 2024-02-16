@@ -16,8 +16,8 @@ export const testimonials: Testimony[] = [
       <br />
       In summary, Joshua is a highly skilled and dedicated software developer with a wealth of experience in full stack development. His expertise in NextJS, Tailwindcss, Prisma, GraphQL and NestJS is invaluable to any project, and his professionalism and teamwork make him a true asset to any software development team. I feel fortunate to have had the opportunity to work alongside him, and I have no doubt that he will continue to excel in his career.
     `,
-    position: 'Fullstack/Mobile Developer at Halcyon Agine Company',
-    companyImageUrl: '/images/company/halcyon.png'
+    position: 'Software Engineer at Booky',
+    companyImageUrl: '/images/company/booky.png'
   },
   {
     profileImageUrl: '/images/testimonials/john-paul-banera.png',
