@@ -44,6 +44,15 @@ export const testimonials: Testimony[] = [
     companyImageUrl: '/images/company/sun-asterisk.png'
   },
   {
+    profileImageUrl: '/images/testimonials/abdul-jalil-palala.png',
+    name: 'Abdul Jalil Palala',
+    text: `
+      I recommend Joshua Galit because he wants to achieve 6k digits HAHAHAHA
+    `,
+    position: 'Fullstack Web Developer at Sun Asterisk Philippines',
+    companyImageUrl: '/images/company/sun-asterisk.png'
+  },
+  {
     profileImageUrl: '/images/testimonials/nilo-castillano-jr.png',
     name: 'Nilo Castillano Jr.',
     text: `
@@ -53,6 +62,15 @@ export const testimonials: Testimony[] = [
       I wholeheartedly recommend Joshua, and I am confident that he will prove to be a valuable addition to your company as well.
     `,
     position: 'Web Developer at Sun Asterisk Philippines',
+    companyImageUrl: '/images/company/sun-asterisk.png'
+  },
+  {
+    profileImageUrl: '/images/testimonials/arden-dave-cabotaje.png',
+    name: 'Arden Dave Cabotaje',
+    text: `
+      Working with sir Joshua has been a learning journey for me. He is a reliable colleague and teammate that is willing to share his knowledge and learnings and very commited to his tasks. The works that he delivers are of high quality and adheres perfectly to the requirements which also shows his proficiency to the technologies used. Not only he is good at his work but he is also quick to deliver them. He is also very effective as a team member, participating in productive brainstorming for ideas and solutions to the problems. In addition to all of this, he is very fun to work with and easy to get along with.
+    `,
+    position: 'Fullstack Developer at Sun Asterisk Philippines',
     companyImageUrl: '/images/company/sun-asterisk.png'
   },
   {
@@ -67,13 +85,4 @@ export const testimonials: Testimony[] = [
     position: 'Top Rated Video Editor Freelancer at Upwork',
     companyImageUrl: '/images/company/upwork.png'
   }
-  // {
-  //   profileImageUrl: '/images/testimonials/abdul-jalil-palala.png',
-  //   name: 'Abdul Jalil Palala',
-  //   text: `
-  //     I recommend Joshua Galit because he wants to achieve 6k digits HAHAHAHA
-  //   `,
-  //   position: 'Fullstack Web Developer at Sun Asterisk Philippines',
-  //   companyImageUrl: '/images/company/sun-asterisk.png'
-  // }
 ]
