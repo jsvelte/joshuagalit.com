@@ -1,21 +1,37 @@
-import React from 'react'
 import Image from 'next/image'
+import { Play } from 'lucide-react'
+import React, { useState } from 'react'
+import ModalVideo from 'react-modal-video'
 
 import { SectionTitle } from '~/components/molecules/section-title'
 
 export default function AboutSection(): JSX.Element {
+  const [isOpen, setOpen] = useState<boolean>(false)
+
+  const handleOpenVideo = (): void => {
+    setOpen(!isOpen)
+  }
+
   return (
     <section id="about" className="section">
       <div className="grid grid-cols-1 gap-x-8 md:grid-cols-2">
-        <div className="flex items-center justify-center" data-aos="fade-up">
+        <div className="relative flex items-center justify-center" data-aos="fade-up">
           <Image
-            src="/images/about/1.png"
+            src="/images/about/2.webp"
             width={390}
             height={390}
-            className="rounded-full"
+            className="rounded-lg"
             priority
             alt=""
           />
+          {/* play btn */}
+          <div
+            role="button"
+            onClick={handleOpenVideo}
+            className="absolute cursor-pointer rounded-full bg-blue-500 p-7 text-6xl transition hover:scale-110 lg:text-[120px]"
+          >
+            <Play className="h-8 w-8 stroke-none" fill="#fff" absoluteStrokeWidth />
+          </div>
         </div>
         <div>
           <div data-aos="fade-down" data-aos-delay="500">
@@ -36,6 +52,13 @@ export default function AboutSection(): JSX.Element {
           </div>
         </div>
       </div>
+
+      <ModalVideo
+        channel="youtube"
+        isOpen={isOpen}
+        videoId="uZdv-TtiMkg"
+        onClose={handleOpenVideo}
+      />
     </section>
   )
 }
