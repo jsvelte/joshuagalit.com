@@ -3,7 +3,9 @@ import React, { useEffect } from 'react'
 import type { AppProps } from 'next/app'
 import { Toaster } from 'react-hot-toast'
 
+import '~/styles/video.scss'
 import '~/styles/globals.css'
+
 import { openSans } from '~/utils/font'
 import { ThemeProvider } from '~/components/templates/theme-provider'
 
